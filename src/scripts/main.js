@@ -193,9 +193,10 @@ if (contactForm) {
     serverErrMsg.classList.remove('visible');
 
     try {
-      const formData  = new FormData(contactForm);
-      const response  = await fetch('https://api.web3forms.com/submit', {
+      const formData = new FormData(contactForm);
+      const response = await fetch('https://formsubmit.co/ajax/liut.fabrice@gmail.com', {
         method: 'POST',
+        headers: { Accept: 'application/json' },
         body: formData,
       });
       const data = await response.json();

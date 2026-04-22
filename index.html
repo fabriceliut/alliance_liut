@@ -558,12 +558,13 @@
             novalidate
             aria-label="Formulaire de contact"
           >
-            <!-- Clé Web3Forms -->
-            <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY" />
-            <input type="hidden" name="subject"    value="Nouveau message — L'Alliance" />
-            <input type="hidden" name="from_name"  value="Alliance Site" />
+            <!-- Formsubmit.co — sans inscription, activation par email à la 1ère soumission -->
+            <input type="hidden" name="_subject"     value="Nouveau message — L'Alliance" />
+            <input type="hidden" name="_template"    value="table" />
+            <input type="hidden" name="_captcha"     value="false" />
+            <input type="hidden" name="_next"        value="" />
             <!-- Anti-spam honeypot -->
-            <input type="checkbox" name="botcheck" style="display:none;" tabindex="-1" aria-hidden="true" />
+            <input type="text" name="_honey" style="display:none;" tabindex="-1" aria-hidden="true" />
 
             <div class="form-row">
               <div class="form-group">
