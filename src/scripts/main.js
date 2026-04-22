@@ -3,11 +3,22 @@
    Vanilla JS: nav scroll, mobile menu, reveal observer, contact
    ============================================================ */
 
-// ── Contact (mailto obfusqué) ────────────────────────────────
+// ── Contact CTAs → scroll vers le formulaire (ou redirection si autre page) ──
 function handleContact(e) {
   if (e) e.preventDefault();
-  const addr = ['fabrice', 'liut.me'].join('@');
-  window.location.href = `mailto:${addr}`;
+  const formSection = document.getElementById('contact');
+  if (formSection) {
+    // On est sur index.html : scroll vers le formulaire
+    formSection.scrollIntoView({ behavior: 'smooth' });
+    // Focus le premier champ après l'animation
+    setTimeout(() => {
+      const firstInput = formSection.querySelector('input, textarea');
+      if (firstInput) firstInput.focus();
+    }, 600);
+  } else {
+    // On est sur une autre page (ex: manifeste) : aller à l'accueil + ancre
+    window.location.href = './index.html#contact';
+  }
 }
 
 // ── Smooth scroll to section ────────────────────────────────
@@ -81,12 +92,12 @@ document.addEventListener('keydown', (e) => {
 });
 
 // ── Contact CTAs ─────────────────────────────────────────────
+// Scroll vers le formulaire (ou mailto pour le lien email direct)
 const contactIds = [
   'cta-contact-nav',
   'cta-contact-mobile',
   'cta-contact-expertise',
   'cta-contact-partners',
-  'cta-contact-footer',
   'cta-contact-manifesto',
 ];
 
@@ -95,6 +106,16 @@ contactIds.forEach((id) => {
   if (!el) return;
   el.addEventListener('click', handleContact);
 });
+
+// Bouton "Écrire directement par e-mail" → mailto
+const emailBtn = document.getElementById('cta-contact-footer');
+if (emailBtn) {
+  emailBtn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const addr = ['fabrice', 'liut.me'].join('@');
+    window.location.href = `mailto:${addr}`;
+  });
+}
 
 // ── Reveal on scroll (IntersectionObserver) ──────────────────
 // Respect prefers-reduced-motion
