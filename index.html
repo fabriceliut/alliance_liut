@@ -1,0 +1,571 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>L'Alliance | Global Partners</title>
+  <meta name="description" content="Partenaires stratégiques seniors pour organisations complexes. Business, Humain, Process, Marque." />
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="L'Alliance | Global Partners" />
+  <meta property="og:description" content="Partenaires stratégiques seniors pour organisations complexes. Business, Humain, Process, Marque." />
+  <meta property="og:url"         content="https://alliance.liut.me/" />
+
+  <!-- Fonts: preconnect + preload principal -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
+  />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/src/styles/main.css" />
+</head>
+<body>
+  <!-- GRAIN -->
+  <div class="grain-bg" aria-hidden="true"></div>
+
+  <!-- SKIP LINK -->
+  <a class="skip-link" href="#main-content">Aller au contenu principal</a>
+
+  <!-- ============================================================
+       NAVBAR
+       ============================================================ -->
+  <nav class="navbar" id="navbar" role="navigation" aria-label="Navigation principale">
+    <div class="container">
+      <div class="navbar__inner">
+
+        <!-- Logo -->
+        <a href="#" class="navbar__logo" aria-label="L'Alliance — retour en haut">
+          <svg class="navbar__logo-icon" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          </svg>
+          <div class="navbar__logo-text">
+            <span class="navbar__logo-name">L'Alliance</span>
+            <span class="navbar__logo-sub">Global Partners</span>
+          </div>
+        </a>
+
+        <!-- Desktop links -->
+        <ul class="navbar__links" role="list">
+          <li><button class="navbar__link" data-scroll="vision">Vision</button></li>
+          <li><button class="navbar__link" data-scroll="expertise">Expertise</button></li>
+          <li><a  class="navbar__link" href="manifesto.html">Manifeste</a></li>
+          <li>
+            <button class="btn-nav" id="cta-contact-nav" aria-label="Initier un dialogue stratégique">
+              Dialogue Stratégique
+            </button>
+          </li>
+        </ul>
+
+        <!-- Mobile burger -->
+        <button
+          class="navbar__burger"
+          id="burger-btn"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          aria-label="Ouvrir le menu"
+        >
+          <svg id="icon-menu" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <line x1="4" x2="20" y1="6"  y2="6"/>
+            <line x1="4" x2="20" y1="12" y2="12"/>
+            <line x1="4" x2="20" y1="18" y2="18"/>
+          </svg>
+          <svg id="icon-close" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false" style="display:none">
+            <path d="M18 6 6 18"/><path d="m6 6 12 12"/>
+          </svg>
+        </button>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- MOBILE MENU -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Menu mobile">
+    <button class="mobile-menu__link" data-scroll="vision"   data-mobile>Vision</button>
+    <button class="mobile-menu__link" data-scroll="expertise" data-mobile>Expertise</button>
+    <a      class="mobile-menu__link" href="manifesto.html">Manifeste</a>
+    <button class="mobile-menu__cta"  id="cta-contact-mobile">Contact</button>
+  </div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+       ============================================================ -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <header class="hero" aria-labelledby="hero-heading">
+      <div class="hero__bg" aria-hidden="true">
+        <div class="hero__blob hero__blob--top"></div>
+        <div class="hero__blob hero__blob--bot"></div>
+      </div>
+
+      <div class="hero__inner">
+        <div class="reveal" style="--reveal-delay: 0.2s">
+          <div class="hero__badge" role="doc-subtitle">
+            <span class="hero__badge-dot" aria-hidden="true"></span>
+            <p class="label-overline" style="color: var(--color-accent); font-size: var(--text-xs);">
+              Stratégie&nbsp;&bull; Organisation&nbsp;&bull; Humain&nbsp;&bull; Matière
+            </p>
+          </div>
+        </div>
+
+        <div class="reveal" style="transition-delay: 0.35s">
+          <h1 class="hero__title" id="hero-heading">
+            Piloter la complexité.<br/>
+            <em>Incarner</em> la réussite.
+          </h1>
+        </div>
+
+        <div class="reveal" style="transition-delay: 0.5s">
+          <p class="hero__subtitle">
+            Tout gérer de l'interne est une illusion coûteuse.<br class="hidden-mobile"/>
+            Nous sommes vos partenaires externes seniors. Nous portons la charge mentale,
+            structurelle et humaine de votre développement.
+          </p>
+        </div>
+
+        <div class="reveal" style="transition-delay: 0.65s">
+          <div style="display: flex; justify-content: center;">
+            <button class="btn-primary" data-scroll="partners" aria-label="Rencontrer les associés de l'Alliance">
+              Rencontrer les associés
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="m6 9 6 6 6-6"/>
+        </svg>
+      </div>
+    </header>
+
+    <!-- ============================================================
+         VISION
+         ============================================================ -->
+    <div class="section-alt">
+      <section id="vision" class="container section-inner" aria-labelledby="vision-heading">
+        <div class="vision-grid">
+
+          <!-- Left: text -->
+          <div class="vision-body">
+            <div class="reveal">
+              <h2 class="heading-2" id="vision-heading">
+                Le défi n'est plus technique.<br/>
+                Il est <span class="text-accent text-italic">existentiel</span>.
+              </h2>
+            </div>
+
+            <div class="reveal" style="transition-delay: 0.1s">
+              <p>
+                Développer une organisation aujourd'hui, c'est naviguer dans un chaos permanent.
+                Technologies exponentielles, quête de sens des équipes, complexité des marchés,
+                exigence de durabilité matérielle et immatérielle.
+              </p>
+            </div>
+
+            <div class="reveal" style="transition-delay: 0.15s">
+              <blockquote class="vision-quote">
+                "Notre raison d'être est simple&nbsp;: nous aimons porter ce que les autres trouvent
+                trop lourd. La responsabilité."
+              </blockquote>
+            </div>
+
+            <div class="reveal" style="transition-delay: 0.2s">
+              <p>
+                Nous ne sommes pas des prestataires de tâches. Nous sommes des
+                <strong>tiers de confiance</strong>. Nous nous engageons physiquement et
+                intellectuellement à vos côtés pour structurer, apaiser et faire croître
+                votre écosystème.
+              </p>
+            </div>
+          </div>
+
+          <!-- Right: Pacte card -->
+          <div class="reveal" style="transition-delay: 0.3s">
+            <div class="pacte-card" role="complementary" aria-label="Notre Pacte">
+              <div class="pacte-card__icon" aria-hidden="true">
+                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/>
+                </svg>
+              </div>
+              <h3 class="pacte-card__title">Notre Pacte</h3>
+              <ul class="pacte-list" role="list">
+                <li>Responsabilité totale sur les résultats</li>
+                <li>Vision systémique (Matériel &amp; Immatériel)</li>
+                <li>Séniorité radicale (Pas de juniors)</li>
+                <li>Adaptabilité organique aux crises</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ============================================================
+         EXPERTISE
+         ============================================================ -->
+    <section id="expertise" class="container section-inner" aria-labelledby="expertise-heading">
+      <div class="section-header reveal">
+        <span class="label-overline">Spectre d'Intervention</span>
+        <h2 class="heading-2" id="expertise-heading">Au-delà du Numérique</h2>
+        <p>
+          Une organisation est un corps vivant. Nous intervenons sur ses organes vitaux&nbsp;:
+          sa structure, son histoire, ses outils et ses lieux.
+        </p>
+      </div>
+
+      <div class="expertise-grid reveal-stagger">
+
+        <!-- Card 1 -->
+        <article class="service-card" aria-label="Expertise Stratégie et Business">
+          <div class="service-card__header">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Stratégie &amp; Business</h3>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__ai">
+              <p class="service-card__ai-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg>
+                Standard (IA)
+              </p>
+              <p class="service-card__ai-text">"L'IA analyse les données passées et optimise les modèles existants."</p>
+            </div>
+            <div>
+              <p class="service-card__alliance-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                Alliance
+              </p>
+              <p class="service-card__alliance-text">
+                Nous sentons les signaux faibles pour pivoter votre modèle économique avant la crise.
+                Nous alignons votre business sur vos valeurs profondes.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="service-card" aria-label="Expertise Organisation et Process">
+          <div class="service-card__header">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Organisation &amp; Process</h3>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__ai">
+              <p class="service-card__ai-label" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg>
+                Standard (IA)
+              </p>
+              <p class="service-card__ai-text">"L'IA automatise les tâches et fluidifie les flux d'information codifiés."</p>
+            </div>
+            <div>
+              <p class="service-card__alliance-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                Alliance
+              </p>
+              <p class="service-card__alliance-text">
+                Nous concevons l'architecture humaine. Nous gérons la politique interne,
+                désamorçons les résistances et créons des processus psychologiquement sains.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="service-card" aria-label="Expertise Marque et Culture">
+          <div class="service-card__header">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" x2="2" y1="8" y2="22"/><line x1="17.5" x2="9" y1="15" y2="15"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Marque &amp; Culture</h3>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__ai">
+              <p class="service-card__ai-label" aria-hidden="true">
+               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg>
+                Standard (IA)
+              </p>
+              <p class="service-card__ai-text">"L'IA génère des logos, des chartes graphiques et des textes cohérents."</p>
+            </div>
+            <div>
+              <p class="service-card__alliance-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                Alliance
+              </p>
+              <p class="service-card__alliance-text">
+                Nous forgeons une mythologie d'entreprise. Nous assurons que votre culture se ressente
+                autant dans vos bureaux que dans votre communication.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="service-card" aria-label="Expertise Ancrage et Matérialité">
+          <div class="service-card__header">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="5" r="3"/><line x1="12" x2="12" y1="22" y2="8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Ancrage &amp; Matérialité</h3>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__ai">
+              <p class="service-card__ai-label" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg>
+                Standard (IA)
+              </p>
+              <p class="service-card__ai-text">"L'IA est sans corps. Elle ignore la réalité physique de vos espaces."</p>
+            </div>
+            <div>
+              <p class="service-card__alliance-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                Alliance
+              </p>
+              <p class="service-card__alliance-text">
+                Nous connectons le conceptuel au réel. Design d'espaces, logistique sensible.
+                Nous ramenons du bon sens tangible dans vos opérations.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 5 -->
+        <article class="service-card" aria-label="Expertise Complexité Humaine">
+          <div class="service-card__header">
+            <div class="service-card__icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/>
+                <path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.18 0l2.6 2.6"/>
+              </svg>
+            </div>
+            <h3 class="service-card__title">Complexité Humaine</h3>
+          </div>
+          <div class="service-card__body">
+            <div class="service-card__ai">
+              <p class="service-card__ai-label" aria-hidden="true">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/></svg>
+                Standard (IA)
+              </p>
+              <p class="service-card__ai-text">"L'IA ne comprend pas l'ego, la peur ou l'ambition non-dite."</p>
+            </div>
+            <div>
+              <p class="service-card__alliance-label">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true" focusable="false"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+                Alliance
+              </p>
+              <p class="service-card__alliance-text">
+                Nous sommes vos médiateurs de haut vol. Nous permettons à des associés de se comprendre,
+                à des équipes de fusionner, et à des leaders de retrouver leur lucidité.
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Card 6: CTA -->
+        <button
+          class="service-card service-card--cta"
+          id="cta-contact-expertise"
+          aria-label="Nous contacter pour discuter de votre défi spécifique"
+        >
+          <h3 class="service-card__cta-title">Votre Défi Spécifique&nbsp;?</h3>
+          <p class="service-card__cta-sub">Chaque situation est unique. Parlons de la vôtre.</p>
+          <div class="service-card__cta-ring" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+              <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+            </svg>
+          </div>
+        </button>
+
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CODE DE L'ALLIANCE
+         ============================================================ -->
+    <div class="section-alt">
+      <section id="code" class="container section-inner" aria-labelledby="code-heading">
+        <div class="reveal">
+          <span class="label-overline">Modus Operandi</span>
+          <h2 class="heading-2" id="code-heading" style="margin-block: var(--space-4) var(--space-6);">Le Code de l'Alliance.</h2>
+          <p style="font-size: var(--text-lg); font-weight: 300; color: var(--color-text-muted); max-width: 640px; line-height: 1.75; margin-bottom: var(--space-16);">
+            Notre force ne vient pas seulement de nos expertises individuelles, mais de la manière
+            dont nous les unissons. Voici les règles qui régissent notre collectif.
+          </p>
+        </div>
+
+        <div class="code-grid reveal-stagger">
+
+          <div class="rule-card">
+            <div class="rule-card__header">
+              <svg class="rule-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+              </svg>
+              <h3 class="rule-card__title">Culte de l'Excellence</h3>
+            </div>
+            <p class="rule-card__text">
+              Nous ne livrons pas de "bon" travail. Nous visons le chef-d'œuvre.
+              C'est notre serment commun face à la standardisation.
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <div class="rule-card__header">
+              <svg class="rule-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+              </svg>
+              <h3 class="rule-card__title">Confiance Radicale</h3>
+            </div>
+            <p class="rule-card__text">
+              La recommandation est notre réflexe par défaut. Nous privilégions l'Alliance
+              car nous connaissons la valeur humaine de chacun.
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <div class="rule-card__header">
+              <svg class="rule-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+              <h3 class="rule-card__title">Matrice IA Partagée</h3>
+            </div>
+            <p class="rule-card__text">
+              Nous mutualisons nos infrastructures et savoirs IA pour réduire l'effort individuel
+              et décupler la performance collective.
+            </p>
+          </div>
+
+          <div class="rule-card">
+            <div class="rule-card__header">
+              <svg class="rule-card__icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/>
+              </svg>
+              <h3 class="rule-card__title">Légitimité par la Preuve</h3>
+            </div>
+            <p class="rule-card__text">
+              Pas de statut théorique. La reconnaissance naît uniquement des cas réels et de notre
+              capacité à apprendre et évoluer ensemble.
+            </p>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- ============================================================
+         PARTNERS
+         ============================================================ -->
+    <div class="section-dark">
+      <section id="partners" class="container section-inner" aria-labelledby="partners-heading">
+        <div class="partners-layout">
+
+          <div class="partners-body reveal">
+            <div>
+              <h2 class="heading-2" id="partners-heading">
+                L'Alliance des<br/>
+                <span class="text-accent">Seniors Libres</span>.
+              </h2>
+              <div class="partners-accent-bar" style="margin-top: var(--space-6);"></div>
+            </div>
+            <p>
+              L'Alliance regroupe des profils seniors autonomes qui ont fait le même constat&nbsp;:
+              l'expertise isolée s'épuise, mais l'expertise connectée est une force invincible.
+            </p>
+            <p>
+              Si vous êtes un expert (Stratégie, RH, Opérations, Design, Finance) et que vous
+              cherchez un collectif capable de porter des projets d'envergure sans perdre votre
+              liberté, rencontrons-nous.
+            </p>
+            <button class="btn-ghost" id="cta-contact-partners" aria-label="Candidater en tant qu'associé de l'Alliance">
+              Candidature Associé
+              <svg class="btn-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="partners-grid reveal" style="transition-delay: 0.2s" aria-hidden="true">
+            <div class="partners-grid__item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="partners-grid__item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="partners-grid__item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+            <div class="partners-grid__item">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+              </svg>
+            </div>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+  </main>
+
+  <!-- ============================================================
+       FOOTER
+       ============================================================ -->
+  <footer id="contact" class="footer" aria-labelledby="footer-heading">
+    <div class="container section-inner">
+      <div class="footer__inner reveal">
+
+        <div class="footer__logo-wrap" aria-hidden="true">
+          <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
+            <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/>
+          </svg>
+        </div>
+
+        <h2 class="footer__heading" id="footer-heading">Initier le mouvement.</h2>
+        <p class="footer__sub">
+          Nous choisissons nos combats et nos partenaires avec soin. Si vous êtes prêt à confier
+          une part de votre complexité, nous sommes prêts à la porter.
+        </p>
+
+        <button class="footer__cta-wrap" id="cta-contact-footer" aria-label="Nous contacter par e-mail">
+          <span class="footer__cta-text">Nous Contacter</span>
+          <div class="footer__cta-line"></div>
+        </button>
+
+        <div class="footer__bottom">
+          <span>© 2025 L'Alliance | Global Partners</span>
+          <nav aria-label="Liens de pied de page">
+            <a href="manifesto.html">Manifeste</a>
+          </nav>
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/src/scripts/main.js"></script>
+</body>
+</html>

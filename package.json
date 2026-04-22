@@ -1,0 +1,27 @@
+{
+  "name": "alliance_liut",
+  "version": "1.0.0",
+  "description": "le site de l'alliance proposé par liut.me",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fabriceliut/alliance_liut.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/fabriceliut/alliance_liut/issues"
+  },
+  "homepage": "https://github.com/fabriceliut/alliance_liut#readme",
+  "devDependencies": {
+    "vite": "^8.0.9"
+  }
+}

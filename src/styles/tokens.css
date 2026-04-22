@@ -1,0 +1,99 @@
+/* ============================================================
+   DESIGN TOKENS — L'Alliance V2
+   Signature: Editorial minimal + grid strict + typo premium
+   ============================================================ */
+
+:root {
+  /* --- COLORS --- */
+  /* Base */
+  --color-base:        oklch(7%  0.015 240);   /* #020617-ish deep navy */
+  --color-surface:     oklch(12% 0.018 240);   /* slate-900 */
+  --color-surface-2:   oklch(15% 0.018 240);   /* slate-850 */
+  --color-surface-3:   oklch(18% 0.018 240);   /* slate-800-ish */
+
+  /* Text */
+  --color-text:        oklch(85% 0.010 220);   /* slate-200 */
+  --color-text-muted:  oklch(62% 0.012 220);   /* slate-400 */
+  --color-text-faint:  oklch(40% 0.010 220);   /* slate-600 */
+
+  /* Accent ambre — jamais utilisé comme fond large */
+  --color-accent:      oklch(72% 0.14  60);    /* amber-500-ish */
+  --color-accent-dim:  oklch(55% 0.12  55);    /* amber-700-ish */
+  --color-accent-bg:   oklch(20% 0.04  60);    /* amber-900/15 overlay */
+
+  /* States */
+  --color-hover-bg:    oklch(18% 0.015 240 / 0.8);
+  --color-disabled:    oklch(35% 0.008 220);
+
+  /* --- BORDERS --- */
+  --border-hairline:   1px solid oklch(25% 0.02 240 / 0.6);
+  --border-accent:     1px solid oklch(55% 0.12 55 / 0.4);
+  --border-dashed:     1px dashed oklch(30% 0.015 240 / 0.7);
+
+  /* --- RADII --- */
+  --radius-card:       0px;   /* architectural: angles vifs */
+  --radius-pill:       9999px;
+  --radius-input:      2px;
+  --radius-modal:      4px;
+
+  /* --- SHADOWS (multi-layer subtils) --- */
+  --shadow-card:
+    0 1px 2px  oklch(0% 0 0 / 0.25),
+    0 4px 12px oklch(0% 0 0 / 0.15);
+  --shadow-card-hover:
+    0 2px 4px  oklch(0% 0 0 / 0.3),
+    0 12px 32px oklch(0% 0 0 / 0.2),
+    0 0  24px oklch(55% 0.12 55 / 0.06);
+  --shadow-elevate:
+    0 8px 24px oklch(0% 0 0 / 0.25),
+    0 1px 3px  oklch(0% 0 0 / 0.3);
+  --shadow-inset:
+    inset 0 1px 3px oklch(0% 0 0 / 0.4);
+  --shadow-focus-ring:
+    0 0 0 2px var(--color-base),
+    0 0 0 4px var(--color-accent);
+
+  /* --- TYPOGRAPHY --- */
+  --font-serif:  'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans:   'Mulish', system-ui, -apple-system, sans-serif;
+
+  /* Type scale — ratio 1.250 (Major Third), clamp for fluid sizing */
+  --text-xs:    clamp(0.64rem,  0.6rem  + 0.2vw,  0.75rem);
+  --text-sm:    clamp(0.8rem,   0.78rem + 0.2vw,  0.875rem);
+  --text-base:  clamp(1rem,     0.95rem + 0.25vw, 1.0625rem);
+  --text-lg:    clamp(1.125rem, 1rem    + 0.5vw,  1.25rem);
+  --text-xl:    clamp(1.25rem,  1.1rem  + 0.7vw,  1.5rem);
+  --text-2xl:   clamp(1.5rem,   1.2rem  + 1.2vw,  2rem);
+  --text-3xl:   clamp(1.875rem, 1.4rem  + 1.8vw,  2.5rem);
+  --text-4xl:   clamp(2.25rem,  1.6rem  + 2.5vw,  3.5rem);
+  --text-5xl:   clamp(2.75rem,  1.8rem  + 3.5vw,  5rem);
+
+  /* --- SPACING --- */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --section-gap: clamp(80px, 10vw, 140px);
+
+  /* --- LAYOUT --- */
+  --max-width:     1280px;
+  --content-px:    clamp(1.5rem, 5vw, 3rem);
+
+  /* --- EASING --- */
+  --ease-out:    cubic-bezier(0.33, 1, 0.68, 1);
+  --ease-in:     cubic-bezier(0.16, 1, 0.3,  1);
+  --ease-spring: cubic-bezier(0.16, 1, 0.3,  1);
+
+  /* --- DURATIONS --- */
+  --dur-fast:   150ms;
+  --dur-mid:    250ms;
+  --dur-reveal: 500ms;
+  --dur-slow:   700ms;
+}

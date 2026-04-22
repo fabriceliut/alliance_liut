@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="fr" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>L'Alliance | Global Partners</title>
+    <meta name="description" content="Partenaires stratégiques seniors pour organisations complexes. Business, Humain, Process, Marque.">
+    
+    <!-- React & Tailwind Stack -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: { serif: ['Playfair Display', 'serif'], sans: ['Mulish', 'sans-serif'] },
+                    colors: { slate: { 850: '#151e2e', 900: '#0f172a', 950: '#020617' }, amber: { 450: '#d97706', 500: '#f59e0b', 600: '#d97706' } },
+                    animation: { 'float': 'float 6s ease-in-out infinite', 'grain': 'grain 8s steps(10) infinite' },
+                    keyframes: {
+                        float: { '0%, 100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-10px)' } },
+                        grain: { '0%, 100%': { transform: 'translate(0, 0)' }, '10%': { transform: 'translate(-5%, -10%)' }, '50%': { transform: 'translate(-15%, 10%)' }, '90%': { transform: 'translate(-10%, 10%)' } }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+
+    <style>
+        /* GLOBAL RESET & SCROLL FIXES */
+        html, body { 
+            background-color: #020617; 
+            color: #cbd5e1; 
+            overflow-x: hidden; 
+            width: 100%;
+            position: relative;
+        }
+        
+        /* GRAIN BACKGROUND */
+        .grain-bg { 
+            position: fixed; 
+            top: -50%; left: -50%; right: -50%; bottom: -50%; 
+            width: 200%; height: 200%; 
+            background: transparent url('data:image/svg+xml,%3Csvg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg"%3E%3Cfilter id="n"%3E%3CfeTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch"/%3E%3C/filter%3E%3Crect width="100%25" height="100%25" filter="url(%23n)" opacity="0.04"/%3E%3C/svg%3E') repeat 0 0; 
+            pointer-events: none; 
+            z-index: 1; 
+            animation: grain 8s steps(10) infinite; 
+        }
+
+        /* UTILITIES */
+        section { scroll-margin-top: 100px; }
+        
+        /* SCROLLBAR */
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #020617; }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #d97706; }
+    </style>
+</head>
+<body>
+    <div id="root"></div>
+
+    <script type="text/babel">
+        // --- LOGIQUE ---
+        const handleContact = (e) => {
+            if(e) e.preventDefault();
+            const part1 = "fabrice";
+            const part2 = "liut.me";
+            window.location.href = `mailto:${part1}@${part2}`;
+        };
+
+        // --- ICONS ---
+        const Icons = {
+            Hexagon: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>,
+            Menu: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>,
+            X: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M18 6 6 18"/><path d="m6 6 18 18"/></svg>,
+            ArrowRight: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>,
+            Shield: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"/></svg>,
+            Compass: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>,
+            Layers: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>,
+            Feather: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"/><line x1="16" x2="2" y1="8" y2="22"/><line x1="17.5" x2="9" y1="15" y2="15"/></svg>,
+            Anchor: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><circle cx="12" cy="5" r="3"/><line x1="12" x2="12" y1="22" y2="8"/><path d="M5 12H2a10 10 0 0 0 20 0h-3"/></svg>,
+            HeartHandshake: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/><path d="M12 5 9.04 7.96a2.17 2.17 0 0 0 0 3.08v0c.82.82 2.13.85 3 .07l2.07-1.9a2.82 2.82 0 0 1 3.18 0l2.6 2.6a2.83 2.83 0 0 1 2.58 4.63"/></svg>,
+            BrainCircuit: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M12 5a3 3 0 1 0-5.997.125 4 4 0 0 0-2.526 5.77 4 4 0 0 0 .556 6.588A4 4 0 1 0 12 18Z"/><path d="M12 5a3 3 0 1 1 5.997.125 4 4 0 0 1 2.526 5.77 4 4 0 0 1-.556 6.588A4 4 0 1 1 12 18Z"/><path d="M15 13a4.5 4.5 0 0 1-3-4 4.5 4.5 0 0 1-3 4"/><path d="M17.599 6.5a3 3 0 0 0 .399-1.375"/><path d="M6.003 5.125A3 3 0 0 0 6.401 6.5"/><path d="M3.477 10.896a4 4 0 0 1 .585-.396"/><path d="M19.938 10.5a4 4 0 0 1 .585.396"/><path d="M6 18a4 4 0 0 1-1.97-3.284"/><path d="M17.97 14.716A4 4 0 0 1 16 18"/></svg>,
+            ChevronDown: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="m6 9 6 6 6-6"/></svg>,
+            Users: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>,
+            Star: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>,
+            Zap: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>,
+            Award: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>,
+            Link: (p) => <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" {...p}><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+        };
+
+        const FadeIn = ({ children, delay = 0, className = "" }) => {
+            const [isVisible, setIsVisible] = React.useState(false);
+            const ref = React.useRef(null);
+            React.useEffect(() => {
+                const observer = new IntersectionObserver(([e]) => { if(e.isIntersecting) { setIsVisible(true); observer.unobserve(ref.current); } }, { threshold: 0.1 });
+                if (ref.current) observer.observe(ref.current);
+                return () => observer.disconnect();
+            }, []);
+            return <div ref={ref} style={{ transition: `all 1000ms cubic-bezier(0.2, 0.8, 0.2, 1) ${delay}s`, opacity: isVisible ? 1 : 0, transform: isVisible ? 'translateY(0)' : 'translateY(40px)' }} className={className}>{children}</div>;
+        };
+
+        const Section = ({ children, id, className = "" }) => (
+            <section id={id} className={`py-20 md:py-32 px-6 md:px-12 max-w-7xl mx-auto relative z-10 ${className}`}>{children}</section>
+        );
+
+        const ServiceCard = ({ title, aiContext, humanValue, icon: Icon }) => {
+            const [hovered, setHovered] = React.useState(false);
+            return (
+                <div className="h-full" onMouseEnter={() => setHovered(true)} onMouseLeave={() => setHovered(false)}>
+                    <div className={`h-full p-8 border backdrop-blur-sm transition-all duration-500 flex flex-col relative overflow-hidden group ${hovered ? 'border-amber-600/40 bg-slate-900/80 -translate-y-2 shadow-[0_20px_40px_-15px_rgba(217,119,6,0.1)]' : 'border-slate-800 bg-slate-900/40'}`}>
+                        <div className={`absolute top-0 right-0 w-32 h-32 bg-amber-600/10 rounded-full blur-3xl transition-opacity duration-700 ${hovered ? 'opacity-100' : 'opacity-0'}`} />
+                        <div className="flex items-center gap-4 mb-8 relative z-10">
+                            <div className={`p-3 transition-colors duration-500 ${hovered ? 'bg-amber-900/20 text-amber-500' : 'bg-slate-800 text-slate-400'}`}><Icon className="w-6 h-6" /></div>
+                            <h3 className={`text-xl font-serif transition-colors duration-300 ${hovered ? 'text-white' : 'text-slate-100'}`}>{title}</h3>
+                        </div>
+                        <div className="space-y-6 flex-grow relative z-10">
+                            <div className={`transition-all duration-500 ${hovered ? 'opacity-30' : 'opacity-60'}`}>
+                                <p className="text-[10px] uppercase tracking-widest text-slate-500 mb-2 flex items-center gap-2"><Icons.BrainCircuit className="w-3 h-3" /> Standard (IA)</p>
+                                <p className="text-sm font-light leading-relaxed text-slate-400 italic pl-4 border-l border-slate-700">"{aiContext}"</p>
+                            </div>
+                            <div className="relative pt-2">
+                                <p className={`text-[10px] uppercase tracking-widest mb-2 flex items-center gap-2 font-bold transition-colors duration-300 ${hovered ? 'text-amber-500' : 'text-amber-700'}`}><Icons.HeartHandshake className="w-3 h-3" /> Alliance</p>
+                                <p className={`text-base font-medium leading-relaxed pl-4 border-l-2 transition-colors duration-300 ${hovered ? 'text-white border-amber-500' : 'text-slate-200 border-amber-700'}`}>{humanValue}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            );
+        };
+        
+        const RuleCard = ({ title, text, icon: Icon }) => (
+            <div className="p-6 border border-slate-800 bg-slate-950/50 hover:border-amber-600/30 transition-colors duration-300 flex flex-col gap-4">
+                <div className="flex items-center gap-3">
+                    <Icon className="w-5 h-5 text-amber-600" />
+                    <h4 className="font-serif text-slate-200 text-lg">{title}</h4>
+                </div>
+                <p className="text-slate-400 text-sm font-light leading-relaxed border-l border-slate-800 pl-4">{text}</p>
+            </div>
+        );
+
+        function App() {
+            const [isScrolled, setIsScrolled] = React.useState(false);
+            const [mobileMenuOpen, setMobileMenuOpen] = React.useState(false);
+            
+            React.useEffect(() => {
+                const handleScroll = () => setIsScrolled(window.scrollY > 50);
+                window.addEventListener('scroll', handleScroll);
+                return () => window.removeEventListener('scroll', handleScroll);
+            }, []);
+            
+            const scrollTo = (id) => { 
+                setMobileMenuOpen(false); 
+                const el = document.getElementById(id); 
+                if (el) el.scrollIntoView({ behavior: 'smooth' }); 
+            };
+
+            return (
+                <div className="min-h-screen relative">
+                    <div className="grain-bg"></div>
+                    
+                    {/* NAVBAR */}
+                    <nav className={`fixed top-0 w-full z-50 transition-all duration-700 border-b ${isScrolled ? 'bg-slate-950/90 backdrop-blur-md py-3 border-slate-800' : 'bg-transparent py-6 border-transparent'}`}>
+                        <div className="max-w-7xl mx-auto px-6 md:px-12 flex justify-between items-center">
+                            <a href="#" className="flex items-center gap-3 group">
+                                <div className="relative"><Icons.Hexagon className="w-8 h-8 text-amber-600 stroke-1 fill-amber-900/10 transition-transform duration-500 group-hover:rotate-90" /></div>
+                                <div className="flex flex-col"><span className="text-lg tracking-[0.2em] font-serif text-slate-100 font-bold uppercase leading-none">L'Alliance</span><span className="text-[0.6rem] text-slate-500 uppercase tracking-widest leading-none mt-1 group-hover:text-amber-600 transition-colors">Global Partners</span></div>
+                            </a>
+                            <div className="hidden md:flex items-center gap-10 text-xs tracking-widest uppercase font-medium text-slate-400">
+                                <button onClick={() => scrollTo('vision')} className="hover:text-amber-500 transition-colors">Vision</button>
+                                <button onClick={() => scrollTo('expertise')} className="hover:text-amber-500 transition-colors">Expertise</button>
+                                <a href="manifesto.html" className="hover:text-amber-500 transition-colors">Manifeste</a>
+                                <button onClick={handleContact} className="px-6 py-2 border border-slate-700 text-slate-300 hover:border-amber-600 hover:text-amber-500 hover:bg-amber-900/10 transition-all duration-300">Dialogue Stratégique</button>
+                            </div>
+                            <button className="md:hidden text-slate-300 hover:text-amber-500" onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>{mobileMenuOpen ? <Icons.X /> : <Icons.Menu />}</button>
+                        </div>
+                    </nav>
+
+                    {/* MOBILE MENU */}
+                    <div className={`fixed inset-0 z-40 bg-slate-950/95 backdrop-blur-xl transition-all duration-500 md:hidden flex flex-col items-center justify-center gap-8 ${mobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+                        <button onClick={() => scrollTo('vision')} className="text-2xl font-serif text-slate-200 hover:text-amber-500">Vision</button>
+                        <button onClick={() => scrollTo('expertise')} className="text-2xl font-serif text-slate-200 hover:text-amber-500">Expertise</button>
+                        <a href="manifesto.html" className="text-2xl font-serif text-slate-200 hover:text-amber-500">Manifeste</a>
+                        <button onClick={handleContact} className="text-amber-500 border border-amber-500 px-8 py-3 text-sm tracking-widest uppercase">Contact</button>
+                    </div>
+
+                    {/* HERO */}
+                    <header className="relative min-h-[95vh] flex items-center justify-center pt-20 overflow-hidden">
+                        <div className="absolute inset-0 z-0">
+                            <div className="absolute top-[10%] right-[10%] w-[500px] h-[500px] bg-slate-800/20 rounded-full blur-[100px] animate-pulse" />
+                            <div className="absolute bottom-[10%] left-[10%] w-[600px] h-[600px] bg-amber-900/10 rounded-full blur-[120px]" />
+                        </div>
+                        <div className="max-w-5xl mx-auto px-6 text-center z-10 relative">
+                            <FadeIn delay={0.2}>
+                                <div className="inline-flex items-center gap-3 border border-slate-800 bg-slate-900/30 px-5 py-2 mb-10 backdrop-blur-sm rounded-full">
+                                    <span className="w-2 h-2 rounded-full bg-amber-500 animate-pulse"></span>
+                                    <p className="text-amber-500 text-[10px] md:text-xs tracking-[0.2em] uppercase font-bold">Stratégie • Organisation • Humain • Matière</p>
+                                </div>
+                            </FadeIn>
+                            <FadeIn delay={0.4}><h1 className="text-5xl md:text-7xl lg:text-8xl font-serif leading-[1.05] text-slate-100 mb-10 tracking-tight">Piloter la complexité.<br/><span className="text-slate-500 italic">Incarner</span> la réussite.</h1></FadeIn>
+                            <FadeIn delay={0.6}><p className="text-lg md:text-xl text-slate-400 font-light max-w-3xl mx-auto leading-relaxed mb-14">Tout gérer de l'interne est une illusion coûteuse. <br className="hidden md:block"/>Nous sommes vos partenaires externes seniors. Nous portons la charge mentale, structurelle et humaine de votre développement.</p></FadeIn>
+                            <FadeIn delay={0.8}>
+                                <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+                                    <button onClick={() => scrollTo('partners')} className="group relative px-10 py-5 bg-slate-100 text-slate-950 font-medium tracking-wide overflow-hidden transition-all hover:bg-amber-500 hover:text-white">
+                                        <span className="relative z-10 flex items-center gap-3">Rencontrer les associés <Icons.ArrowRight className="w-4 h-4 transition-transform group-hover:translate-x-1" /></span>
+                                    </button>
+                                </div>
+                            </FadeIn>
+                        </div>
+                        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 animate-float opacity-30 text-slate-400"><Icons.ChevronDown /></div>
+                    </header>
+
+                    {/* VISION */}
+                    <div id="vision" className="bg-slate-900/50 border-y border-slate-800 relative overflow-hidden">
+                        <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-transparent via-amber-600 to-transparent opacity-50"></div>
+                        <Section>
+                            <div className="grid lg:grid-cols-12 gap-16 items-start">
+                                <div className="lg:col-span-7">
+                                    <FadeIn>
+                                        <h2 className="text-4xl md:text-5xl font-serif leading-tight text-slate-100 mb-10">Le défi n'est plus technique.<br/>Il est <span className="text-amber-600 italic">existentiel</span>.</h2>
+                                        <div className="space-y-8 text-slate-300 text-lg font-light leading-relaxed text-justify">
+                                            <p>Développer une organisation aujourd'hui, c'est naviguer dans un chaos permanent. Technologies exponentielles, quête de sens des équipes, complexité des marchés, exigence de durabilité matérielle et immatérielle.</p>
+                                            <div className="border-l-4 border-slate-700 pl-6 py-2 italic text-slate-400 bg-slate-800/20">"Notre raison d'être est simple : nous aimons porter ce que les autres trouvent trop lourd. La responsabilité."</div>
+                                            <p>Nous ne sommes pas des prestataires de tâches. Nous sommes des <strong className="text-slate-100 font-medium">tiers de confiance</strong>. Nous nous engageons physiquement et intellectuellement à vos côtés pour structurer, apaiser et faire croître votre écosystème.</p>
+                                        </div>
+                                    </FadeIn>
+                                </div>
+                                <div className="lg:col-span-5 relative mt-10 lg:mt-0">
+                                    <FadeIn delay={0.3}>
+                                        <div className="relative p-10 border border-slate-800 bg-slate-950 shadow-2xl group hover:border-amber-600/30 transition-colors duration-500">
+                                            <div className="absolute -top-3 -right-3 text-amber-600 bg-slate-950 p-2 border border-slate-800 group-hover:text-amber-500 transition-colors"><Icons.Shield className="w-8 h-8" /></div>
+                                            <h3 className="text-2xl font-serif text-slate-100 mb-8">Notre Pacte</h3>
+                                            <ul className="space-y-6">{["Responsabilité totale sur les résultats", "Vision systémique (Matériel & Immatériel)", "Séniorité radicale (Pas de juniors)", "Adaptabilité organique aux crises"].map((item, i) => (
+                                                <li key={i} className="flex items-start gap-4 text-slate-400 group-hover:text-slate-300 transition-colors"><span className="h-px w-6 bg-amber-600 mt-3 flex-shrink-0"></span><span>{item}</span></li>
+                                            ))}</ul>
+                                        </div>
+                                    </FadeIn>
+                                </div>
+                            </div>
+                        </Section>
+                    </div>
+
+                    {/* EXPERTISE */}
+                    <div id="expertise">
+                        <Section>
+                            <div className="text-center max-w-4xl mx-auto mb-24">
+                                <FadeIn><span className="text-amber-600 text-xs tracking-[0.3em] uppercase block mb-4 font-bold">Spectre d'Intervention</span><h2 className="text-4xl md:text-5xl font-serif text-slate-100 mb-8">Au-delà du Numérique</h2><p className="text-slate-400 font-light text-lg">Une organisation est un corps vivant. Nous intervenons sur ses organes vitaux : sa structure, son histoire, ses outils et ses lieux.</p></FadeIn>
+                            </div>
+                            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-fr">
+                                <FadeIn delay={0.1} className="h-full"><ServiceCard icon={Icons.Compass} title="Stratégie & Business" aiContext="L'IA analyse les données passées et optimise les modèles existants." humanValue="Nous sentons les signaux faibles pour pivoter votre modèle économique avant la crise. Nous alignons votre business sur vos valeurs profondes." /></FadeIn>
+                                <FadeIn delay={0.2} className="h-full"><ServiceCard icon={Icons.Layers} title="Organisation & Process" aiContext="L'IA automatise les tâches et fluidifie les flux d'information codifiés." humanValue="Nous concevons l'architecture humaine. Nous gérons la politique interne, désamorçons les résistances et créons des processus psychologiquement sains." /></FadeIn>
+                                <FadeIn delay={0.3} className="h-full"><ServiceCard icon={Icons.Feather} title="Marque & Culture" aiContext="L'IA génère des logos, des chartes graphiques et des textes cohérents." humanValue="Nous forgeons une mythologie d'entreprise. Nous assurons que votre culture se ressente autant dans vos bureaux (matériel) que dans votre communication." /></FadeIn>
+                                <FadeIn delay={0.4} className="h-full"><ServiceCard icon={Icons.Anchor} title="Ancrage & Matérialité" aiContext="L'IA est sans corps. Elle ignore la réalité physique de vos espaces." humanValue="Nous connectons le conceptuel au réel. Design d'espaces, logistique sensible. Nous ramenons du bon sens tangible dans vos opérations." /></FadeIn>
+                                <FadeIn delay={0.5} className="h-full"><ServiceCard icon={Icons.HeartHandshake} title="Complexité Humaine" aiContext="L'IA ne comprend pas l'ego, la peur ou l'ambition non-dite." humanValue="Nous sommes vos médiateurs de haut vol. Nous permettons à des associés de se comprendre, à des équipes de fusionner, et à des leaders de retrouver leur lucidité." /></FadeIn>
+                                <FadeIn delay={0.6} className="h-full">
+                                    <div className="h-full border border-dashed border-slate-700 p-8 flex flex-col justify-center items-center text-center bg-slate-900/20 hover:bg-slate-900/40 hover:border-amber-600/50 transition-all duration-300 group cursor-pointer" onClick={handleContact}>
+                                        <h3 className="text-2xl font-serif text-slate-300 mb-4 group-hover:text-white transition-colors">Votre Défi Spécifique ?</h3>
+                                        <p className="text-slate-500 mb-8 text-sm group-hover:text-slate-400">Chaque situation est unique. Parlons de la vôtre.</p>
+                                        <div className="w-14 h-14 rounded-full border border-amber-600 text-amber-600 flex items-center justify-center group-hover:bg-amber-600 group-hover:text-slate-950 transition-all shadow-[0_0_20px_rgba(217,119,6,0)] group-hover:shadow-[0_0_20px_rgba(217,119,6,0.4)]"><Icons.ArrowRight /></div>
+                                    </div>
+                                </FadeIn>
+                            </div>
+                        </Section>
+                    </div>
+
+                    {/* NOUVELLE SECTION : LE CODE DE L'ALLIANCE */}
+                    <div id="code" className="bg-slate-900/50 border-t border-slate-800">
+                        <Section>
+                            <div className="mb-16">
+                                <FadeIn>
+                                    <span className="text-amber-600 text-xs tracking-[0.3em] uppercase block mb-4 font-bold">Modus Operandi</span>
+                                    <h2 className="text-3xl md:text-4xl font-serif text-slate-100 mb-6">Le Code de l'Alliance.</h2>
+                                    <p className="text-slate-400 font-light text-lg max-w-2xl">
+                                        Notre force ne vient pas seulement de nos expertises individuelles, mais de la manière dont nous les unissons. Voici les règles qui régissent notre collectif.
+                                    </p>
+                                </FadeIn>
+                            </div>
+                            
+                            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                                <FadeIn delay={0.1}>
+                                    <RuleCard 
+                                        icon={Icons.Star}
+                                        title="Culte de l'Excellence"
+                                        text="Nous ne livrons pas de 'bon' travail. Nous visons le chef-d'œuvre. C'est notre serment commun face à la standardisation."
+                                    />
+                                </FadeIn>
+                                <FadeIn delay={0.2}>
+                                    <RuleCard 
+                                        icon={Icons.Link}
+                                        title="Confiance Radicale"
+                                        text="La recommandation est notre réflexe par défaut. Nous privilégions l'Alliance car nous connaissons la valeur humaine de chacun."
+                                    />
+                                </FadeIn>
+                                <FadeIn delay={0.3}>
+                                    <RuleCard 
+                                        icon={Icons.Zap}
+                                        title="Matrice IA Partagée"
+                                        text="Nous mutualisons nos infrastructures et savoirs IA pour réduire l'effort individuel et décupler la performance collective."
+                                    />
+                                </FadeIn>
+                                <FadeIn delay={0.4}>
+                                    <RuleCard 
+                                        icon={Icons.Award}
+                                        title="Légitimité par la Preuve"
+                                        text="Pas de statut théorique. La reconnaissance naît uniquement des cas réels et de notre capacité à apprendre et évoluer ensemble."
+                                    />
+                                </FadeIn>
+                            </div>
+                        </Section>
+                    </div>
+
+                    {/* PARTNERS */}
+                    <div id="partners" className="bg-slate-900 py-24 relative overflow-hidden border-t border-slate-800">
+                        <Section className="relative z-10">
+                            <div className="flex flex-col md:flex-row gap-16 items-center">
+                                <div className="md:w-1/2">
+                                    <FadeIn>
+                                        <h2 className="text-3xl md:text-5xl font-serif text-slate-100 mb-6 leading-tight">L'Alliance des <br/><span className="text-amber-600">Seniors Libres</span>.</h2>
+                                        <div className="w-24 h-1 bg-amber-600 mb-8"></div>
+                                        <p className="text-slate-400 font-light text-lg mb-8 leading-relaxed">L'Alliance regroupe des profils seniors autonomes qui ont fait le même constat : l'expertise isolée s'épuise, mais l'expertise connectée est une force invincible.</p>
+                                        <p className="text-slate-400 font-light text-lg mb-8">Si vous êtes un expert (Stratégie, RH, Opérations, Design, Finance) et que vous cherchez un collectif capable de porter des projets d'envergure sans perdre votre liberté, rencontrons-nous.</p>
+                                        <button onClick={handleContact} className="inline-flex items-center gap-3 text-slate-100 border-b border-amber-600 pb-1 hover:text-amber-500 transition-colors uppercase tracking-widest text-xs font-bold group">Candidature Associé <Icons.ArrowRight className="w-3 h-3 transition-transform group-hover:translate-x-1"/></button>
+                                    </FadeIn>
+                                </div>
+                                <div className="md:w-1/2 grid grid-cols-2 gap-4 opacity-80">
+                                    {[0, 1, 2, 3].map((i) => <FadeIn key={i} delay={0.2 * i}><div className="aspect-square bg-slate-800/30 border border-slate-700 flex items-center justify-center hover:bg-slate-800 hover:border-amber-600/30 transition-all duration-500 group"><Icons.Users className="w-8 h-8 text-slate-600 group-hover:text-amber-600 transition-colors" /></div></FadeIn>)}
+                                </div>
+                            </div>
+                        </Section>
+                    </div>
+
+                    {/* FOOTER */}
+                    <footer id="contact" className="py-24 border-t border-slate-900 bg-slate-950 relative">
+                        <Section>
+                            <div className="text-center">
+                                <FadeIn>
+                                    <div className="inline-block p-4 rounded-full bg-slate-900 mb-8 border border-slate-800"><Icons.Hexagon className="w-10 h-10 text-amber-600" /></div>
+                                    <h2 className="text-4xl md:text-6xl font-serif text-slate-100 mb-8">Initier le mouvement.</h2>
+                                    <p className="text-slate-500 font-light mb-12 max-w-xl mx-auto text-lg">Nous choisissons nos combats et nos partenaires avec soin. Si vous êtes prêt à confier une part de votre complexité, nous sommes prêts à la porter.</p>
+                                    <div className="inline-block relative group mb-16 cursor-pointer" onClick={handleContact}>
+                                        <span className="text-3xl md:text-5xl text-amber-600 font-serif relative z-10 transition-colors group-hover:text-amber-500">Nous Contacter</span>
+                                        <div className="h-px w-full bg-amber-900/50 mt-4 group-hover:bg-amber-600 transition-colors duration-500"></div>
+                                    </div>
+                                    <div className="flex flex-col md:flex-row justify-between items-center text-xs text-slate-600 uppercase tracking-widest border-t border-slate-900 pt-10 gap-6">
+                                        <span>© 2025 L'Alliance | Global Partners</span>
+                                        <div className="flex gap-8">
+                                            <a href="manifesto.html" className="hover:text-slate-400 transition-colors">Manifeste</a>
+                                        </div>
+                                    </div>
+                                </FadeIn>
+                            </div>
+                        </Section>
+                    </footer>
+                </div>
+            );
+        }
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<App />);
+    </script>
+</body>
+</html>
