@@ -83,6 +83,7 @@ const contactIds = [
   'cta-contact-expertise',
   'cta-contact-partners',
   'cta-contact-footer',
+  'cta-contact-manifesto',
 ];
 
 contactIds.forEach((id) => {
@@ -137,7 +138,89 @@ if (!prefersReducedMotion) {
   });
 }
 
-// ── Hero: apply reveal immediately (above fold) ──────────────
+// ── Contact form (Web3Forms) ──────────────────────────────────
+const contactForm = document.getElementById('contact-form');
+if (contactForm) {
+  const submitBtn     = document.getElementById('form-submit-btn');
+  const submitLabel   = document.getElementById('form-submit-label');
+  const spinner       = document.getElementById('form-submit-spinner');
+  const successMsg    = document.getElementById('form-success');
+  const serverErrMsg  = document.getElementById('form-server-error');
+
+  // Inline validation helpers
+  function setFieldError(input, errorId, show) {
+    const errorEl = document.getElementById(errorId);
+    if (!errorEl) return;
+    input.setAttribute('aria-invalid', show ? 'true' : 'false');
+    errorEl.classList.toggle('visible', show);
+  }
+
+  function validateField(input) {
+    if (input.type === 'email') {
+      const valid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(input.value.trim());
+      setFieldError(input, `${input.id}-error`, !valid);
+      return valid;
+    }
+    const empty = input.value.trim() === '';
+    setFieldError(input, `${input.id}-error`, empty);
+    return !empty;
+  }
+
+  // Live validation on blur
+  contactForm.querySelectorAll('.form-input, .form-textarea').forEach((field) => {
+    field.addEventListener('blur', () => validateField(field));
+    field.addEventListener('input', () => {
+      if (field.getAttribute('aria-invalid') === 'true') validateField(field);
+    });
+  });
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    // Validate all fields
+    const fields = [...contactForm.querySelectorAll('.form-input, .form-textarea')];
+    const allValid = fields.every((f) => validateField(f));
+    if (!allValid) {
+      fields.find((f) => f.getAttribute('aria-invalid') === 'true')?.focus();
+      return;
+    }
+
+    // Loading state
+    submitBtn.disabled = true;
+    submitLabel.textContent = 'Envoi en cours…';
+    spinner.style.display = 'block';
+    successMsg.classList.remove('visible');
+    serverErrMsg.classList.remove('visible');
+
+    try {
+      const formData  = new FormData(contactForm);
+      const response  = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: formData,
+      });
+      const data = await response.json();
+
+      if (data.success) {
+        successMsg.classList.add('visible');
+        contactForm.reset();
+        fields.forEach((f) => f.setAttribute('aria-invalid', 'false'));
+      } else {
+        serverErrMsg.classList.add('visible');
+      }
+    } catch {
+      serverErrMsg.classList.add('visible');
+    } finally {
+      submitBtn.disabled = false;
+      submitLabel.textContent = 'Envoyer le message';
+      spinner.style.display = 'none';
+    }
+  });
+}
+
+// ── Spinner keyframe (inline) ─────────────────────────────────
+const styleEl = document.createElement('style');
+styleEl.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
+document.head.appendChild(styleEl);
 // Items with transition-delay defined via inline style still need is-visible
 // For above-fold hero items, trigger after a micro-tick so CSS parses delays
 setTimeout(() => {
