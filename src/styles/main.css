@@ -1331,6 +1331,106 @@ h1, h2, h3 {
 /* Spinner animation (utilisé par le formulaire de contact) */
 @keyframes spin { to { transform: rotate(360deg); } }
 
+/* ── Social Proof Strip ──────────────────────────────────────── */
+.proof-strip {
+  border-top: var(--border-hairline);
+  border-bottom: var(--border-hairline);
+  background: oklch(11% 0.012 240 / 0.6);
+  padding: var(--space-6) 0;
+}
+.proof-strip__inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-8);
+  flex-wrap: wrap;
+}
+.proof-strip__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  text-align: center;
+}
+.proof-strip__number {
+  font-family: var(--font-serif);
+  font-size: var(--text-2xl);
+  font-weight: 700;
+  color: var(--color-accent);
+  line-height: 1;
+}
+.proof-strip__label {
+  font-size: var(--text-xs);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+.proof-strip__sep {
+  width: 1px;
+  height: 2.5rem;
+  background: var(--color-surface-3);
+}
+@media (max-width: 480px) { .proof-strip__sep { display: none; } }
+
+/* ── Vision manifesto teaser ─────────────────────────────────── */
+.vision-manifesto-teaser {
+  display: block;
+  padding: var(--space-6) var(--space-8);
+  border: var(--border-dashed);
+  background: oklch(12% 0.018 240 / 0.3);
+  text-decoration: none;
+  border-radius: var(--radius-sm);
+  transition: border-color var(--dur-mid), background var(--dur-mid);
+}
+.vision-manifesto-teaser:hover {
+  border-color: oklch(55% 0.12 55 / 0.4);
+  background: oklch(14% 0.018 240 / 0.5);
+}
+
+/* ── Partner cards ───────────────────────────────────────────── */
+.partners-profiles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+.partner-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-6);
+  border: var(--border-hairline);
+  border-radius: var(--radius-sm);
+  background: oklch(14% 0.015 240 / 0.4);
+  transition: border-color var(--dur-mid);
+}
+.partner-card:hover { border-color: oklch(55% 0.12 55 / 0.3); }
+.partner-card__avatar {
+  width: 3rem; height: 3rem;
+  border-radius: var(--radius-pill);
+  background: var(--color-surface-3);
+  border: var(--border-hairline);
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-serif); font-size: var(--text-xl);
+  color: var(--color-accent); font-weight: 700; flex-shrink: 0;
+}
+.partner-card__info { display: flex; flex-direction: column; gap: 2px; }
+.partner-card__name {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  color: var(--color-text);
+}
+.partner-card__role {
+  font-size: var(--text-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-accent-dim);
+}
+.partner-card__line {
+  font-size: var(--text-sm);
+  font-weight: 300;
+  color: var(--color-text-faint);
+}
+
 /* prefers-reduced-motion: désactivation totale des animations */
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after {

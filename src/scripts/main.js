@@ -96,6 +96,7 @@ document.addEventListener('keydown', (e) => {
 const contactIds = [
   'cta-contact-nav',
   'cta-contact-mobile',
+  'cta-contact-hero',
   'cta-contact-expertise',
   'cta-contact-partners',
   'cta-contact-manifesto',

@@ -58,8 +58,8 @@
           <li><button class="navbar__link" data-scroll="expertise">Expertise</button></li>
           <li><a  class="navbar__link" href="manifesto.html">Manifeste</a></li>
           <li>
-            <button class="btn-nav" id="cta-contact-nav" aria-label="Initier un dialogue stratégique">
-              Dialogue Stratégique
+            <button class="btn-nav" id="cta-contact-nav" aria-label="Nous contacter">
+              Nous contacter
             </button>
           </li>
         </ul>
@@ -91,7 +91,7 @@
     <button class="mobile-menu__link" data-scroll="vision"   data-mobile>Vision</button>
     <button class="mobile-menu__link" data-scroll="expertise" data-mobile>Expertise</button>
     <a      class="mobile-menu__link" href="manifesto.html">Manifeste</a>
-    <button class="mobile-menu__cta"  id="cta-contact-mobile">Contact</button>
+    <button class="mobile-menu__cta"  id="cta-contact-mobile">Nous contacter</button>
   </div>
 
   <!-- ============================================================
@@ -111,34 +111,35 @@
           <div class="hero__badge" role="doc-subtitle">
             <span class="hero__badge-dot" aria-hidden="true"></span>
             <p class="label-overline" style="color: var(--color-accent); font-size: var(--text-xs);">
-              Stratégie&nbsp;&bull; Organisation&nbsp;&bull; Humain&nbsp;&bull; Matière
+              Collectif de seniors&nbsp;&bull;&nbsp;Lyon&nbsp;&bull;&nbsp;Fondé par Fabrice Liut
             </p>
           </div>
         </div>
 
         <div class="reveal is-visible" style="transition-delay: 0.35s">
           <h1 class="hero__title" id="hero-heading">
-            Piloter la complexité.<br/>
-            <em>Incarner</em> la réussite.
+            Quand votre organisation<br/>
+            dépasse ce que vous pouvez<br/>
+            <em>porter seul</em>.
           </h1>
         </div>
 
         <div class="reveal is-visible" style="transition-delay: 0.5s">
           <p class="hero__subtitle">
-            Tout gérer de l'interne est une illusion coûteuse.<br class="hidden-mobile"/>
-            Nous sommes vos partenaires externes seniors. Nous portons la charge mentale,
-            structurelle et humaine de votre développement.
+            Nous ne sommes pas des consultants. Nous sommes des partenaires seniors qui entrent dans votre complexité,
+            portent la charge avec vous, et en sortent avec vous.
           </p>
         </div>
 
         <div class="reveal is-visible" style="transition-delay: 0.65s">
-          <div style="display: flex; justify-content: center;">
-            <button class="btn-primary" data-scroll="partners" aria-label="Rencontrer les associés de l'Alliance">
-              Rencontrer les associés
+          <div style="display:flex;justify-content:center;align-items:center;gap:var(--space-6);flex-wrap:wrap;">
+            <button class="btn-primary" id="cta-contact-hero" aria-label="Décrire votre situation à L'Alliance">
+              Décrire votre situation
               <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                 <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
               </svg>
             </button>
+            <a href="manifesto.html" class="btn-ghost">Lire le manifeste</a>
           </div>
         </div>
       </div>
@@ -149,6 +150,33 @@
         </svg>
       </div>
     </header>
+
+    <!-- ============================================================
+         PREUVE SOCIALE
+         ============================================================ -->
+    <div class="proof-strip" aria-hidden="true">
+      <div class="container proof-strip__inner">
+        <div class="proof-strip__item">
+          <span class="proof-strip__number">15</span>
+          <span class="proof-strip__label">ans d'expérience</span>
+        </div>
+        <div class="proof-strip__sep"></div>
+        <div class="proof-strip__item">
+          <span class="proof-strip__number">+100</span>
+          <span class="proof-strip__label">organisations accompagnées</span>
+        </div>
+        <div class="proof-strip__sep"></div>
+        <div class="proof-strip__item">
+          <span class="proof-strip__number">3</span>
+          <span class="proof-strip__label">types de clients · PME · ETI · Grands Groupes</span>
+        </div>
+        <div class="proof-strip__sep"></div>
+        <div class="proof-strip__item">
+          <span class="proof-strip__number">Lyon</span>
+          <span class="proof-strip__label">Ancré local · rayonnement national</span>
+        </div>
+      </div>
+    </div>
 
     <!-- ============================================================
          VISION
@@ -162,22 +190,28 @@
             <div class="reveal">
               <h2 class="heading-2" id="vision-heading">
                 Le défi n'est plus technique.<br/>
-                Il est <span class="text-accent text-italic">existentiel</span>.
+                Il est <span class="text-accent text-italic">humain</span>.
               </h2>
             </div>
 
             <div class="reveal" style="transition-delay: 0.1s">
               <p>
-                Développer une organisation aujourd'hui, c'est naviguer dans un chaos permanent.
-                Technologies exponentielles, quête de sens des équipes, complexité des marchés,
-                exigence de durabilité matérielle et immatérielle.
+                Depuis 15 ans, Fabrice Liut accompagne des dirigeants de PME, ETI et grands groupes
+                (Decathlon, EDF, Saint-Gobain, Vinci…) face à un constat récurrent&nbsp;: ce qui bloque
+                une organisation n'est presque jamais technique. C'est toujours humain, politique, culturel.
+              </p>
+            </div>
+
+            <div class="reveal" style="transition-delay: 0.12s">
+              <p>
+                L'Alliance est le collectif qu'il a fondé pour démultiplier cette capacité&nbsp;:
+                plusieurs seniors, une vision commune, zéro junior. Pas une agence — une guilde.
               </p>
             </div>
 
             <div class="reveal" style="transition-delay: 0.15s">
               <blockquote class="vision-quote">
-                "Notre raison d'être est simple&nbsp;: nous aimons porter ce que les autres trouvent
-                trop lourd. La responsabilité."
+                "Nous aimons porter ce que les autres trouvent trop lourd. La responsabilité."
               </blockquote>
             </div>
 
@@ -188,6 +222,17 @@
                 intellectuellement à vos côtés pour structurer, apaiser et faire croître
                 votre écosystème.
               </p>
+            </div>
+
+            <!-- Teaser manifeste -->
+            <div class="reveal" style="transition-delay: 0.25s">
+              <a href="manifesto.html" class="vision-manifesto-teaser" aria-label="Lire La Grande Bifurcation — notre manifeste">
+                <span class="label-overline" style="font-size:var(--text-xs);">Notre Manifeste</span>
+                <span style="font-family:var(--font-serif);font-size:var(--text-xl);color:var(--color-text);display:block;margin-top:var(--space-2);">
+                  La Grande Bifurcation — Pourquoi l'exécution est devenue gratuite et la confiance, inestimable.
+                </span>
+                <span class="btn-ghost" style="margin-top:var(--space-4);font-size:var(--text-xs);">Lire →</span>
+              </a>
             </div>
           </div>
 
@@ -490,13 +535,21 @@
               <div class="partners-accent-bar" style="margin-top: var(--space-6);"></div>
             </div>
             <p>
-              L'Alliance regroupe des profils seniors autonomes qui ont fait le même constat&nbsp;:
-              l'expertise isolée s'épuise, mais l'expertise connectée est une force invincible.
+              L'Alliance regroupe des experts seniors autonomes qui ont fait le même constat&nbsp;:
+              l'expertise isolée s'épuise, l'expertise connectée est inarrêtable.
+              Pas de hiérarchie, pas de juniors — des pairs qui se choisissent pour leur complémentarité.
             </p>
-            <p>
-              Si vous êtes un expert (Stratégie, RH, Opérations, Design, Finance) et que vous
-              cherchez un collectif capable de porter des projets d'envergure sans perdre votre
-              liberté, rencontrons-nous.
+
+            <!-- Bénéfices rejoindre -->
+            <ul class="pacte-list" role="list" style="margin-top:0;">
+              <li>Accès à un réseau de clients exigeants sans chasser seul</li>
+              <li>Infrastructure IA mutualisée (prompts, outils, automatisations)</li>
+              <li>Projets d'envergure inaccessibles en solo</li>
+              <li>Communauté de pairs qui se challengent et se recommandent</li>
+            </ul>
+
+            <p style="font-size:var(--text-sm);color:var(--color-text-faint);font-style:italic;">
+              Profils recherchés&nbsp;: Stratégie, RH, Opérations, Design, Finance, IA — séniorité & autonomie requises.
             </p>
             <button class="btn-ghost" id="cta-contact-partners" aria-label="Candidater en tant qu'associé de l'Alliance">
               Candidature Associé
@@ -506,27 +559,27 @@
             </button>
           </div>
 
-          <div class="partners-grid reveal" style="transition-delay: 0.2s" aria-hidden="true">
-            <div class="partners-grid__item">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
+          <!-- Profils associés -->
+          <div class="partners-profiles reveal" style="transition-delay: 0.2s">
+
+            <div class="partner-card">
+              <div class="partner-card__avatar">F</div>
+              <div class="partner-card__info">
+                <span class="partner-card__name">Fabrice Liut</span>
+                <span class="partner-card__role">Fondateur · Design Organisationnel</span>
+                <span class="partner-card__line">15 ans · PME, ETI, Grands Groupes</span>
+              </div>
             </div>
-            <div class="partners-grid__item">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
+
+            <div class="partner-card">
+              <div class="partner-card__avatar">+</div>
+              <div class="partner-card__info">
+                <span class="partner-card__name">Associés en cours</span>
+                <span class="partner-card__role">Stratégie · RH · Finance · Design</span>
+                <span class="partner-card__line">La guilde se construit. Rejoignez-nous.</span>
+              </div>
             </div>
-            <div class="partners-grid__item">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
-            </div>
-            <div class="partners-grid__item">
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-              </svg>
-            </div>
+
           </div>
 
         </div>
@@ -548,10 +601,10 @@
           </svg>
         </div>
 
-        <h2 class="footer__heading" id="footer-heading">Initier le mouvement.</h2>
+        <h2 class="footer__heading" id="footer-heading">Une situation à démêler ?</h2>
         <p class="footer__sub">
-          Nous choisissons nos combats et nos partenaires avec soin. Si vous êtes prêt à confier
-          une part de votre complexité, nous sommes prêts à la porter.
+          Décrivez-nous votre contexte en quelques lignes. Pas de pitch commercial de notre côté :
+          on lira, on réfléchit, et si ça matche, on organise un appel.
         </p>
 
         <!-- CONTACT FORM (Web3Forms — gratuit, 250 messages/mois) -->
