@@ -243,16 +243,4 @@ if (contactForm) {
   });
 }
 
-// ── Spinner keyframe (inline) ─────────────────────────────────
-const styleEl = document.createElement('style');
-styleEl.textContent = '@keyframes spin { to { transform: rotate(360deg); } }';
-document.head.appendChild(styleEl);
-// Items with transition-delay defined via inline style still need is-visible
-// For above-fold hero items, trigger after a micro-tick so CSS parses delays
-setTimeout(() => {
-  document.querySelectorAll('.hero .reveal').forEach((el) => {
-    // The IntersectionObserver will fire but hero is already in viewport,
-    // so this is a belt-and-suspenders fallback.
-    el.classList.add('is-visible');
-  });
-}, 50);
+

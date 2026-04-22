@@ -12,13 +12,17 @@
   <meta property="og:description" content="Partenaires stratégiques seniors pour organisations complexes. Business, Humain, Process, Marque." />
   <meta property="og:url"         content="https://alliance.liut.me/" />
 
-  <!-- Fonts: preconnect + preload principal -->
+  <!-- Favicon, canonical, theme -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d97706' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'><path d='M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z'/></svg>" />
+  <link rel="canonical" href="https://alliance.liut.me/" />
+  <meta name="theme-color" content="#020617" />
+
+  <!-- Fonts: async (non-blocking) -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap"
-  />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" />
+  <link rel="stylesheet" media="print" onload="this.media='all'" href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Mulish:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" /></noscript>
 
   <!-- Styles -->
   <link rel="stylesheet" href="/src/styles/main.css" />
@@ -103,7 +107,7 @@
       </div>
 
       <div class="hero__inner">
-        <div class="reveal" style="--reveal-delay: 0.2s">
+        <div class="reveal is-visible" style="--reveal-delay: 0.2s">
           <div class="hero__badge" role="doc-subtitle">
             <span class="hero__badge-dot" aria-hidden="true"></span>
             <p class="label-overline" style="color: var(--color-accent); font-size: var(--text-xs);">
@@ -112,14 +116,14 @@
           </div>
         </div>
 
-        <div class="reveal" style="transition-delay: 0.35s">
+        <div class="reveal is-visible" style="transition-delay: 0.35s">
           <h1 class="hero__title" id="hero-heading">
             Piloter la complexité.<br/>
             <em>Incarner</em> la réussite.
           </h1>
         </div>
 
-        <div class="reveal" style="transition-delay: 0.5s">
+        <div class="reveal is-visible" style="transition-delay: 0.5s">
           <p class="hero__subtitle">
             Tout gérer de l'interne est une illusion coûteuse.<br class="hidden-mobile"/>
             Nous sommes vos partenaires externes seniors. Nous portons la charge mentale,
@@ -127,7 +131,7 @@
           </p>
         </div>
 
-        <div class="reveal" style="transition-delay: 0.65s">
+        <div class="reveal is-visible" style="transition-delay: 0.65s">
           <div style="display: flex; justify-content: center;">
             <button class="btn-primary" data-scroll="partners" aria-label="Rencontrer les associés de l'Alliance">
               Rencontrer les associés

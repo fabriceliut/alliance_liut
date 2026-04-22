@@ -381,15 +381,15 @@ h1, h2, h3 {
   z-index: 0;
   overflow: hidden;
 }
-/* Blobs — pas d'animation pulse, juste de la couleur ambiante */
+/* Blobs — radial-gradient (pas de filter:blur = pas de layer de composition) */
 .hero__blob {
   position: absolute;
   border-radius: var(--radius-pill);
-  filter: blur(80px);
   pointer-events: none;
+  border-radius: 50%;
 }
-.hero__blob--top  { top: 8%;  right: 8%;  width: 400px; height: 400px; background: oklch(20% 0.015 240 / 0.25); }
-.hero__blob--bot  { bottom: 8%; left: 8%; width: 500px; height: 500px; background: oklch(25% 0.04  55  / 0.12); }
+.hero__blob--top  { top: 8%;  right: 8%;  width: 500px; height: 500px; background: radial-gradient(circle, oklch(25% 0.04 55 / 0.10) 0%, transparent 70%); }
+.hero__blob--bot  { bottom: 8%; left: 8%; width: 600px; height: 600px; background: radial-gradient(circle, oklch(20% 0.015 240 / 0.20) 0%, transparent 70%); }
 
 .hero__inner {
   position: relative;
@@ -405,11 +405,10 @@ h1, h2, h3 {
   align-items: center;
   gap: var(--space-3);
   border: var(--border-hairline);
-  background: oklch(12% 0.018 240 / 0.5);
+  background: oklch(12% 0.018 240 / 0.85);
   padding: var(--space-2) var(--space-5);
   border-radius: var(--radius-pill);
   margin-bottom: var(--space-10);
-  backdrop-filter: blur(4px);
 }
 .hero__badge-dot {
   width: 8px; height: 8px;
@@ -585,8 +584,7 @@ h1, h2, h3 {
   flex-direction: column;
   padding: var(--space-8);
   border: var(--border-hairline);
-  background: oklch(12% 0.018 240 / 0.4);
-  backdrop-filter: blur(4px);
+  background: oklch(12% 0.018 240 / 0.85);
   position: relative;
   overflow: hidden;
   transition:
@@ -1329,6 +1327,9 @@ h1, h2, h3 {
   background: var(--color-surface-3);
 }
 @media (max-width: 480px) { .manifesto-meta__sep { display: none; } }
+
+/* Spinner animation (utilisé par le formulaire de contact) */
+@keyframes spin { to { transform: rotate(360deg); } }
 
 /* prefers-reduced-motion: désactivation totale des animations */
 @media (prefers-reduced-motion: reduce) {
