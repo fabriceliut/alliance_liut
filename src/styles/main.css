@@ -513,6 +513,14 @@ h1, h2, h3 {
   font-weight: 300;
 }
 
+/* Vision right column (pacte + cas terrain stacked) */
+.vision-right {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+  align-self: start;
+}
+
 /* Pacte card */
 .pacte-card {
   position: relative;
@@ -1491,9 +1499,10 @@ h1, h2, h3 {
 
 /* ── Vision case snippet ───────────────────────────────────────────────── */
 .vision-case {
-  padding: var(--space-5) var(--space-6);
-  border-left: 2px solid var(--color-accent);
+  padding: var(--space-8) var(--space-6);
+  border-left: 2px solid oklch(55% 0.12 55 / 0.5);
   background: oklch(12% 0.018 240 / 0.2);
+  margin-top: var(--space-4);
 }
 .vision-case__text {
   font-size: var(--text-sm);
@@ -1572,11 +1581,12 @@ h1, h2, h3 {
   height: 100%;
   object-fit: cover;
   object-position: top center;
-  filter: grayscale(20%);
-  transition: filter var(--dur-mid);
+  filter: url(#duotone-alliance) grayscale(0%);
+  transition: filter var(--dur-slow);
+  display: block;
 }
 .membre-card:hover .membre-card__photo img {
-  filter: grayscale(0%);
+  filter: grayscale(10%);
 }
 .membre-card__info {
   display: flex;

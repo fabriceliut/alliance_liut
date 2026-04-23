@@ -28,6 +28,20 @@
   <link rel="stylesheet" href="/src/styles/main.css" />
 </head>
 <body>
+  <!-- SVG filter: duotone charte (ombre→marine, lumière→ambre) -->
+  <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <defs>
+      <filter id="duotone-alliance" color-interpolation-filters="sRGB">
+        <feColorMatrix type="saturate" values="0" result="gray"/>
+        <feComponentTransfer in="gray">
+          <feFuncR type="table" tableValues="0.047 0.902"/>
+          <feFuncG type="table" tableValues="0.063 0.671"/>
+          <feFuncB type="table" tableValues="0.098 0.200"/>
+        </feComponentTransfer>
+      </filter>
+    </defs>
+  </svg>
+
   <!-- GRAIN -->
   <div class="grain-bg" aria-hidden="true"></div>
 
@@ -193,16 +207,17 @@
 
             <div class="reveal" style="transition-delay: 0.1s">
               <p>
-                Depuis 15 ans, Fabrice Liut accompagne des dirigeants de PME, ETI et grands groupes
-                (Decathlon, EDF, Saint-Gobain, Vinci…) face à un constat récurrent&nbsp;: ce qui bloque
-                une organisation n'est presque jamais technique. C'est toujours humain, politique, culturel.
+                Ensemble, nous avons travaillé avec des dirigeants de PME, ETI et grands groupes
+                (Decathlon, EDF, Saint-Gobain, Vinci…) et nous avons tous fait face au même constat :
+                ce qui bloque une organisation n'est presque jamais technique.
+                C'est toujours humain, politique, culturel.
               </p>
             </div>
 
             <div class="reveal" style="transition-delay: 0.12s">
               <p>
-                L'Alliance est le collectif qu'il a fondé pour démultiplier cette capacité&nbsp;:
-                plusieurs seniors, une vision commune, zéro junior. Pas une agence — une Alliance.
+                C'est ce constat partagé qui nous a conduit à créer L'Alliance :
+                plusieurs seniors, une vision commune, zéro junior. Pas une agence — un collectif de pairs.
               </p>
             </div>
 
@@ -221,18 +236,6 @@
               </p>
             </div>
 
-            <div class="reveal" style="transition-delay: 0.22s">
-              <div class="vision-case">
-                <span class="label-overline" style="font-size:var(--text-xs);">Cas terrain</span>
-                <p class="vision-case__text">
-                  ETI industrielle, ~380 personnes, Rhône-Alpes. 18 mois de tensions au CODIR,
-                  turnover croissant sur les cadres dirigeants, projets stratégiques bloqués.
-                  En 4 mois : cartographie des dynamiques internes, médiation, restructuration
-                  de la gouvernance. <strong>Turnover divisé par trois. Cap stratégique
-                  à 3 ans retrouvé.</strong>
-                </p>
-              </div>
-            </div>
 
             <!-- Teaser manifeste -->
             <div class="reveal" style="transition-delay: 0.25s">
@@ -246,8 +249,8 @@
             </div>
           </div>
 
-          <!-- Right: Pacte card -->
-          <div class="reveal" style="transition-delay: 0.3s">
+          <!-- Right: Pacte card + Cas terrain -->
+          <div class="vision-right reveal" style="transition-delay: 0.3s">
             <div class="pacte-card" role="complementary" aria-label="Notre Pacte">
               <div class="pacte-card__icon" aria-hidden="true">
                 <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
@@ -262,6 +265,17 @@
                 <li>Adaptabilité organique aux crises</li>
               </ul>
             </div>
+
+            <div class="vision-case">
+              <span class="label-overline" style="font-size:var(--text-xs);">Cas terrain</span>
+              <p class="vision-case__text">
+                ETI industrielle, ~380 personnes, Rhône-Alpes. 18 mois de tensions au CODIR,
+                turnover croissant sur les cadres dirigeants, projets stratégiques bloqués.
+                En 4 mois : cartographie des dynamiques internes, médiation, restructuration
+                de la gouvernance. <strong>Turnover divisé par trois. Cap stratégique
+                à 3 ans retrouvé.</strong>
+              </p>
+            </div>
           </div>
 
         </div>
@@ -274,7 +288,7 @@
     <section id="expertise" class="container section-inner" aria-labelledby="expertise-heading">
       <div class="section-header reveal">
         <span class="label-overline">Spectre d'Intervention</span>
-        <h2 class="heading-2" id="expertise-heading">Au-delà du Numérique</h2>
+        <h2 class="heading-2" id="expertise-heading">Tout le Spectre. Aucun Angle Mort.</h2>
         <p>
           Une organisation est un corps vivant. Nous intervenons sur ses organes vitaux&nbsp;:
           sa structure, son histoire, ses outils et ses lieux.
