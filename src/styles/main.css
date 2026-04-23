@@ -1879,6 +1879,109 @@ h1, h2, h3 {
 }
 p { overflow-wrap: break-word; }
 
+/* ── Page heading (h1 pages secondaires) ─────────────────────────────────── */
+.page-heading {
+  font-family: var(--font-serif);
+  font-size: var(--text-5xl);
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+  color: var(--color-text);
+  margin-block: var(--space-6) var(--space-8);
+  text-wrap: balance;
+}
+
+/* ── Page subtitle (lead italic sous h1) ─────────────────────────────────── */
+.page-subtitle {
+  font-size: var(--text-xl);
+  font-weight: 300;
+  font-style: italic;
+  color: var(--color-text-muted);
+  line-height: 1.6;
+  max-width: 580px;
+  margin-inline: auto;
+}
+
+/* ── Hero CTA group ───────────────────────────────────────────────────────── */
+.hero__ctas {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--space-6);
+  flex-wrap: wrap;
+}
+
+/* ── Button group (flex wrap, pour manifesto-cta + footer) ──────────────── */
+.btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+  align-items: center;
+}
+
+/* ── Section intro (lead sous h2 de section) ─────────────────────────────── */
+.section-intro {
+  font-size: var(--text-lg);
+  font-weight: 300;
+  color: var(--color-text-muted);
+  max-width: 640px;
+  line-height: 1.75;
+  margin-bottom: var(--space-16);
+}
+/* heading-2 spacing inside sections */
+.section-inner .heading-2 {
+  margin-block: var(--space-4) var(--space-6);
+}
+
+/* ── Teaser inner elements ────────────────────────────────────────────────── */
+.teaser__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-xl);
+  color: var(--color-text);
+  display: block;
+  margin-top: var(--space-2);
+}
+.teaser__cta {
+  display: inline-flex;
+  margin-top: var(--space-4);
+}
+
+/* ── Testimonial CTA wrap ────────────────────────────────────────────────── */
+.testimonial__cta-wrap {
+  text-align: center;
+  margin-top: var(--space-8);
+}
+
+/* ── Manifesto meta author ────────────────────────────────────────────────── */
+.manifesto-meta__author {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* ── Footer minimal (pages secondaires) ──────────────────────────────────── */
+.footer--minimal {
+  border-top: var(--border-hairline);
+}
+.footer--minimal .footer__bar {
+  padding-block: var(--space-10);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-4);
+}
+.footer--minimal .footer__copy {
+  font-size: var(--text-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+}
+
+/* ── Article width modifiers ──────────────────────────────────────────────── */
+.article-content--mid  { max-width: 780px; }
+.article-content--wide { max-width: 860px; }
+
 /* ── Offer-format card hover arrow animation ───────────────────── */
 .offer-format-card .btn-primary .btn-arrow,
 .manifesto-cta .btn-primary .btn-arrow {
