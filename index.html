@@ -202,7 +202,7 @@
             <div class="reveal" style="transition-delay: 0.12s">
               <p>
                 L'Alliance est le collectif qu'il a fondé pour démultiplier cette capacité&nbsp;:
-                plusieurs seniors, une vision commune, zéro junior. Pas une agence — une guilde.
+                plusieurs seniors, une vision commune, zéro junior. Pas une agence — une Alliance.
               </p>
             </div>
 
@@ -536,13 +536,15 @@
       <div class="container">
         <blockquote class="testimonial reveal">
           <p class="testimonial__quote">
-            « L’Alliance ne nous a pas livré un rapport de plus. Ils sont entrés dans
-            notre organisation les yeux ouverts, ont vu ce qu’on refusait de voir —
-            et nous ont aidés à le traverser ensemble. »
+            « Fabrice a mobilisé sa A-Team comme il l'appelle pour nous aider
+            à améliorer l'installation de nos pompes. Nous avons vu grâce à eux
+            ce que nous ne pouvions voir la tête dans le guidon.
+            Désormais nos installations se font en moyenne en 20 minutes
+            au lieu de 48&nbsp;heures. Ça change tout. »
           </p>
           <footer class="testimonial__author">
-            <span class="testimonial__name">Directeur Général</span>
-            <span class="testimonial__context">Groupe industriel &middot; ETI ~300 personnes &middot; Rhône-Alpes</span>
+            <span class="testimonial__name">Directeur Innovation</span>
+            <span class="testimonial__context">BDR Thermea Group</span>
           </footer>
         </blockquote>
       </div>
@@ -564,66 +566,142 @@
               <div class="partners-accent-bar" style="margin-top: var(--space-6);"></div>
             </div>
             <p>
-              L'Alliance regroupe des experts seniors autonomes qui ont fait le même constat&nbsp;:
-              l'expertise isolée s'épuise, l'expertise connectée est inarrêtable.
-              Pas de hiérarchie, pas de juniors — des pairs qui se choisissent pour leur complémentarité.
+              Un collectif de pairs qui se sont choisis &mdash; pas pour leurs dipl&ocirc;mes,
+              mais pour leur compl&eacute;mentarit&eacute; et leur fa&ccedil;on d&rsquo;&ecirc;tre au monde.
+              Pas de hi&eacute;rarchie, pas de juniors. Quand L&rsquo;Alliance intervient,
+              c&rsquo;est elle qui g&egrave;re la relation et les livrables.
+              Entre membres, chacun reste libre de son propre fonctionnement.
             </p>
 
-            <!-- Bénéfices rejoindre -->
-            <ul class="pacte-list" role="list" style="margin-top:0;">
-              <li>Accès à un réseau de clients exigeants sans chasser seul</li>
-              <li>Infrastructure IA mutualisée (prompts, outils, automatisations)</li>
-              <li>Projets d'envergure inaccessibles en solo</li>
-              <li>Communauté de pairs qui se challengent et se recommandent</li>
-            </ul>
-
             <div class="join-steps">
-              <p class="label-overline" style="font-size:var(--text-xs);margin-bottom:var(--space-4);">Comment ça fonctionne</p>
+              <p class="label-overline" style="font-size:var(--text-xs);margin-bottom:var(--space-5);">Rejoindre l&rsquo;Alliance</p>
               <ol class="join-steps__list">
                 <li>
                   <span class="join-steps__num">01</span>
-                  <div><strong>Candidature</strong> — Décrivez votre parcours et ce qui vous amène ici via le formulaire.</div>
+                  <div><strong>Candidature</strong>&nbsp;&mdash; D&eacute;crivez votre parcours
+                  et ce qui vous am&egrave;ne ici via le formulaire.</div>
                 </li>
                 <li>
                   <span class="join-steps__num">02</span>
-                  <div><strong>Échange</strong> — Un appel avec Fabrice. Pas de pitch : une conversation honnête sur ce qu’on construit.</div>
+                  <div><strong>&Eacute;change</strong>&nbsp;&mdash; Une conversation honn&ecirc;te sur
+                  ce qu&rsquo;on construit, sans pitch ni s&eacute;lection froide.</div>
                 </li>
                 <li>
                   <span class="join-steps__num">03</span>
-                  <div><strong>Mission partagée</strong> — Votre première collaboration au sein du collectif, avec le soutien de l’Alliance.</div>
+                  <div><strong>Premi&egrave;re mission</strong>&nbsp;&mdash; Vous intervenez
+                  aux c&ocirc;t&eacute;s du collectif. L&rsquo;Alliance g&egrave;re le client.</div>
                 </li>
               </ol>
             </div>
 
-            <p style="font-size:var(--text-sm);color:var(--color-text-faint);font-style:italic;">
-              Profils recherchés&nbsp;: Stratégie, RH, Opérations, Design, Finance, IA — séniorité & autonomie requises.
-            </p>
-            <button class="btn-ghost" id="cta-contact-partners" aria-label="Candidater en tant qu'associé de l'Alliance">
-              Candidature Associé
+            <button class="btn-ghost" id="cta-contact-partners" aria-label="Candidater pour rejoindre l'Alliance">
+              Rejoindre l'Alliance
               <svg class="btn-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
                 <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
               </svg>
             </button>
           </div>
 
-          <!-- Profils associés -->
-          <div class="partners-profiles reveal" style="transition-delay: 0.2s">
+          <!-- Grille membres -->
+          <div class="membres-grid reveal" style="transition-delay: 0.2s">
 
-            <div class="partner-card">
-              <div class="partner-card__avatar">F</div>
-              <div class="partner-card__info">
-                <span class="partner-card__name">Fabrice Liut</span>
-                <span class="partner-card__role">Fondateur · Design Organisationnel</span>
-                <span class="partner-card__line">15 ans · PME, ETI, Grands Groupes</span>
+            <div class="membre-card">
+              <div class="membre-card__photo">
+                <img src="/membres/fabrice-liut.jpg" alt="Fabrice Liut" width="80" height="80" loading="lazy" />
+              </div>
+              <div class="membre-card__info">
+                <span class="membre-card__name">Fabrice Liut</span>
+                <span class="membre-card__role">Structure &middot; Coordination &middot; Livrables</span>
               </div>
             </div>
 
-            <div class="partner-card">
-              <div class="partner-card__avatar">+</div>
-              <div class="partner-card__info">
-                <span class="partner-card__name">Associés en cours</span>
-                <span class="partner-card__role">Stratégie · RH · Finance · Design</span>
-                <span class="partner-card__line">La guilde se construit. Rejoignez-nous.</span>
+            <div class="membre-card">
+              <div class="membre-card__photo">
+                <img src="/membres/fanny-parise.jpg" alt="Fanny Parise" width="80" height="80" loading="lazy" />
+              </div>
+              <div class="membre-card__info">
+                <span class="membre-card__name">Fanny Parise</span>
+                <span class="membre-card__role">Anthropologie &middot; Sociologie</span>
+              </div>
+            </div>
+
+            <div class="membre-card">
+              <div class="membre-card__photo">
+                <img src="/membres/marie-cecile-paccard.jpg" alt="Marie-C&eacute;cile Paccard" width="80" height="80" loading="lazy" />
+              </div>
+              <div class="membre-card__info">
+                <span class="membre-card__name">Marie-C&eacute;cile Paccard</span>
+                <span class="membre-card__role">Design &middot; Vision &middot; Renoncement</span>
+              </div>
+            </div>
+
+            <div class="membre-card">
+              <div class="membre-card__photo">
+                <img src="/membres/hugo-stepanian.jpg" alt="Hugo Stepanian" width="80" height="80" loading="lazy" />
+              </div>
+              <div class="membre-card__info">
+                <span class="membre-card__name">Hugo Stepanian</span>
+                <span class="membre-card__role">Marque &middot; Branding &middot; Strat&eacute;gie com</span>
+              </div>
+            </div>
+
+            <div class="membre-card">
+              <div class="membre-card__photo">
+                <img src="/membres/emile-londero.jpg" alt="&Eacute;mile Londero" width="80" height="80" loading="lazy" />
+              </div>
+              <div class="membre-card__info">
+                <span class="membre-card__name">&Eacute;mile Londero</span>
+                <span class="membre-card__role">Marque &middot; Branding &middot; Strat&eacute;gie com</span>
+              </div>
+            </div>
+
+            <div class="membre-card">
+              <div class="membre-card__photo">
+                <img src="/membres/gregor-ozbolt.jpg" alt="Gregor Ozbolt" width="80" height="80" loading="lazy" />
+              </div>
+              <div class="membre-card__info">
+                <span class="membre-card__name">Gregor Ozbolt</span>
+                <span class="membre-card__role">Coaching de leader &middot; Performance</span>
+              </div>
+            </div>
+
+            <div class="membre-card">
+              <div class="membre-card__photo">
+                <img src="/membres/romain-vacher.jpg" alt="Romain Vacher" width="80" height="80" loading="lazy" />
+              </div>
+              <div class="membre-card__info">
+                <span class="membre-card__name">Romain Vacher</span>
+                <span class="membre-card__role">Entrepreneuriat &middot; Structuration &middot; Invest</span>
+              </div>
+            </div>
+
+            <div class="membre-card">
+              <div class="membre-card__photo">
+                <img src="/membres/thibault-jaillon.jpg" alt="Thibault Jaillon" width="80" height="80" loading="lazy" />
+              </div>
+              <div class="membre-card__info">
+                <span class="membre-card__name">Thibault Jaillon</span>
+                <span class="membre-card__role">Entrepreneuriat &middot; Structuration &middot; Invest</span>
+              </div>
+            </div>
+
+            <div class="membre-card">
+              <div class="membre-card__photo">
+                <img src="/membres/yanis-cherfaoui.jpg" alt="Yanis Cherfaoui" width="80" height="80" loading="lazy" />
+              </div>
+              <div class="membre-card__info">
+                <span class="membre-card__name">Yanis Cherfaoui</span>
+                <span class="membre-card__role">Innovation &middot; M&eacute;ta-design</span>
+              </div>
+            </div>
+
+            <div class="membre-card">
+              <div class="membre-card__photo">
+                <img src="/membres/steph-cruchon.jpg" alt="Steph Cruchon" width="80" height="80" loading="lazy" />
+              </div>
+              <div class="membre-card__info">
+                <span class="membre-card__name">Steph Cruchon</span>
+                <span class="membre-card__role">Facilitation &middot; Workshop &middot; Design Sprint</span>
               </div>
             </div>
 
