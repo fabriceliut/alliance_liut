@@ -195,6 +195,18 @@ h1, h2, h3 {
 }
 @media (min-width: 768px) { .navbar__links { display: flex; } }
 
+/* Secondary page back-link wrapper */
+.navbar__back {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+.navbar__back-link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
 .navbar__link {
   font-size: var(--text-xs);
   letter-spacing: 0.25em;
@@ -829,6 +841,7 @@ h1, h2, h3 {
   width: 6rem;
   height: 2px;
   background: var(--color-accent);
+  margin-top: var(--space-6);
   margin-bottom: var(--space-8);
 }
 
@@ -956,7 +969,14 @@ h1, h2, h3 {
 }
 .footer__bottom a:hover { color: var(--color-text-muted); }
 /* Footer nav links on secondary pages */
-.footer__nav-link:hover { color: var(--color-text-muted) !important; }
+.footer__nav-link {
+  font-size: var(--text-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  transition: color var(--dur-mid);
+}
+.footer__nav-link:hover { color: var(--color-text-muted); }
 
 /* ============================================================
    SECTION HEADER (overline + title + sub)
@@ -1207,6 +1227,30 @@ h1, h2, h3 {
   box-shadow: 0 0 8px oklch(72% 0.14 60 / 0.6);
 }
 
+/* Article bottom padding */
+.article-content { padding-bottom: var(--section-gap); }
+
+/* Prose utilities — body text inside CTA blocks / article */
+.prose-muted {
+  font-size: var(--text-base);
+  font-weight: 300;
+  color: var(--color-text-muted);
+  line-height: 1.75;
+  margin-bottom: var(--space-4);
+}
+.prose-lead {
+  font-size: var(--text-lg);
+  color: var(--color-text);
+  line-height: 1.7;
+  margin-bottom: var(--space-6);
+}
+.prose-accent-title {
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: var(--space-8);
+}
+
 /* Article typography */
 .article-content p {
   font-size: var(--text-lg);
@@ -1328,7 +1372,7 @@ h1, h2, h3 {
 
 /* Manifesto CTA block */
 .manifesto-cta {
-  margin-top: var(--space-20);
+  margin-block: var(--space-16);
   padding: var(--space-10);
   border: var(--border-accent);
   background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-base) 100%);
@@ -1981,6 +2025,49 @@ p { overflow-wrap: break-word; }
 /* ── Article width modifiers ──────────────────────────────────────────────── */
 .article-content--mid  { max-width: 780px; }
 .article-content--wide { max-width: 860px; }
+
+/* ── KPI numbers (testimonials + workshops) ────────────────────── */
+.kpi__number {
+  display: block;
+  font-size: var(--text-2xl);
+  font-family: var(--font-serif);
+  color: var(--color-accent);
+  margin-bottom: var(--space-3);
+  font-style: normal;
+}
+.kpi__source {
+  font-size: var(--text-sm);
+  color: var(--color-text-faint);
+  margin-top: var(--space-2);
+  text-align: center;
+}
+
+/* ── Divider ────────────────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: var(--border-hairline);
+  margin-block: var(--space-16);
+}
+
+/* ── Text utilities ─────────────────────────────────────────────── */
+.text-footnote {
+  font-size: var(--text-sm);
+  color: var(--color-text-faint);
+  font-style: italic;
+}
+.blockquote--sm {
+  font-style: italic;
+  font-size: var(--text-sm);
+}
+
+/* ── btn-ghost small modifier ───────────────────────────────────── */
+.btn-ghost--sm { font-size: var(--text-sm); }
+
+/* ── Join steps overline label ──────────────────────────────────── */
+.join-steps .label-overline { margin-bottom: var(--space-5); }
+
+/* ── Testimonial CTA wrap btn-ghost size ────────────────────────── */
+.testimonial__cta-wrap .btn-ghost { font-size: var(--text-xs); }
 
 /* ── Offer-format card hover arrow animation ───────────────────── */
 .offer-format-card .btn-primary .btn-arrow,

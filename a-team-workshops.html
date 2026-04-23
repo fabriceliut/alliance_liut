@@ -44,8 +44,8 @@
             <span class="navbar__logo-sub">Alliés Stratégiques</span>
           </div>
         </a>
-        <div style="display:flex;align-items:center;gap:var(--space-6);">
-          <a class="navbar__link" href="./index.html" style="display:flex;align-items:center;gap:var(--space-2);">
+        <div class="navbar__back">
+          <a class="navbar__link navbar__back-link" href="./index.html">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></svg>
             Accueil
           </a>
@@ -73,7 +73,7 @@
           Débloquer en 3 étapes clés un sujet stratégique<br/>qui traîne depuis des mois.
         </p>
       </div>
-      <div class="reveal" style="transition-delay:0.3s;margin-top:var(--space-8);">
+      <div class="reveal" style="transition-delay:0.3s;">
         <a href="https://cal.com/fabrice-liut/45-min-meeting?overlayCalendar=true"
            class="btn-primary"
            target="_blank" rel="noopener noreferrer"
@@ -101,7 +101,7 @@
     <!-- ============================================================
          CONTENU
          ============================================================ -->
-    <article class="container article-content article-content--wide" style="padding-bottom:var(--section-gap);" aria-label="Les A-Team Workshops — offre de L'Alliance">
+    <article class="container article-content article-content--wide" aria-label="Les A-Team Workshops — offre de L'Alliance">
 
       <!-- 01 L'idée -->
       <div class="reveal">
@@ -179,9 +179,9 @@
       </div>
 
       <!-- CTA intermédiaire -->
-      <div class="manifesto-cta reveal" style="margin-block:var(--space-16);">
+      <div class="manifesto-cta reveal">
         <p class="manifesto-cta-title">Quel format vous ressemble&nbsp;?</p>
-        <p style="font-size:var(--text-base);font-weight:300;color:var(--color-text-muted);line-height:1.75;margin-bottom:var(--space-6);">
+        <p class="prose-muted" style="margin-bottom:var(--space-6);">
           45 minutes pour poser votre contexte. On vous dit si on peut aider — et comment.
         </p>
         <a href="https://cal.com/fabrice-liut/45-min-meeting?overlayCalendar=true"
@@ -240,23 +240,23 @@
       <div class="quotes-grid">
         <div class="reveal">
           <blockquote>
-            <strong style="display:block;font-size:var(--text-2xl);font-family:var(--font-serif);color:var(--color-accent);margin-bottom:var(--space-3);">−18 j de délai moyen</strong>
+            <strong class="kpi__number">−18 j de délai moyen</strong>
             « PMI mécanique, 45 personnes. En 3 jours, production, qualité et commerce réalignés autour d'un plan clair. −18 jours de délai moyen de livraison en 4 mois. Le CODIR tranche enfin. »
           </blockquote>
-          <p style="font-size:var(--text-sm);color:var(--color-text-faint);margin-top:var(--space-2);text-align:center;">— Dirigeant, secteur industriel</p>
+          <p class="kpi__source">— Dirigeant, secteur industriel</p>
         </div>
 
         <div class="reveal" style="transition-delay:0.1s">
           <blockquote>
-            <strong style="display:block;font-size:var(--text-2xl);font-family:var(--font-serif);color:var(--color-accent);margin-bottom:var(--space-3);">Cycle de décision ÷ 2</strong>
+            <strong class="kpi__number">Cycle de décision ÷ 2</strong>
             « PME de services industriels, 80 personnes, en pleine transmission. Un Sprint CODIR de 3 jours a clarifié les rôles et arbitrages du futur comité. 3 mois plus tard&nbsp;: cycle de décision divisé par 2, repreneur aligné avec l'équipe historique. »
           </blockquote>
-          <p style="font-size:var(--text-sm);color:var(--color-text-faint);margin-top:var(--space-2);text-align:center;">— Président, secteur services B2B</p>
+          <p class="kpi__source">— Président, secteur services B2B</p>
         </div>
       </div>
 
       <div class="reveal">
-        <p style="font-size:var(--text-sm);color:var(--color-text-faint);font-style:italic;">
+        <p class="text-footnote">
           Ils nous ont fait confiance&nbsp;: Leroy Merlin, FSC France, Verkor, Hello Asso, CERA, Valorem, EDF R&amp;D, Saint-Gobain, Decathlon, Vinci, Groupe Adeo, Bosch Rexroth, et 100+ autres.
         </p>
       </div>
@@ -281,10 +281,10 @@
       <!-- CTA final -->
       <div class="manifesto-cta reveal">
         <p class="manifesto-cta-title">On se parle&nbsp;?</p>
-        <p style="font-size:var(--text-base);font-weight:300;color:var(--color-text-muted);line-height:1.75;margin-bottom:var(--space-4);">
+        <p class="prose-muted">
           45 minutes. Sans engagement.
         </p>
-        <p style="font-size:var(--text-base);font-weight:300;color:var(--color-text-muted);line-height:1.75;margin-bottom:var(--space-6);">
+        <p class="prose-muted" style="margin-bottom:var(--space-6);">
           Vous posez le contexte, nous mettons des mots sur le nœud, nous vous disons si nous pouvons aider — et comment.
         </p>
         <div class="btn-group">
@@ -299,13 +299,13 @@
           </a>
           <a href="./index.html#contact" class="btn-ghost">Nous écrire →</a>
         </div>
-        <p style="font-size:var(--text-xs);color:var(--color-text-faint);margin-top:var(--space-6);">
+        <p class="text-footnote" style="margin-top:var(--space-6);">
           <a href="./index.html#contact" style="color:inherit;">Formulaire de contact →</a>
         </p>
       </div>
 
       <!-- Séparateur -->
-      <hr style="border:none;border-top:var(--border-hairline);margin-block:var(--space-16);" />
+      <hr class="divider" />
 
       <!-- Qui porte cette offre -->
       <div class="reveal">
@@ -313,23 +313,23 @@
         <p><strong>L'Alliance</strong> — le collectif de seniors libres fondé par Fabrice Liut. Pas une agence&nbsp;: des tiers de confiance. Zéro junior. Pas de hiérarchie. Des pairs qui se choisissent pour leur complémentarité.</p>
         <p><strong>Mode squad</strong> — Pour chaque workshop, nous sélectionnons 1 à 3 membres de L'Alliance complémentaires sur votre sujet. Fabrice coordonne la préparation et co-facilite avec votre propre équipe. Pas de mercenaires&nbsp;: des pairs qui se connaissent déjà et qui ont l'habitude de bosser ensemble.</p>
         <p>
-          <a href="./index.html" class="btn-ghost" style="font-size:var(--text-sm);">Découvrir L'Alliance →</a>
+          <a href="./index.html" class="btn-ghost btn-ghost--sm">Découvrir L'Alliance →</a>
           &nbsp;·&nbsp;
-          <a href="./manifesto.html" class="btn-ghost" style="font-size:var(--text-sm);">La Grande Bifurcation →</a>
+          <a href="./manifesto.html" class="btn-ghost btn-ghost--sm">La Grande Bifurcation →</a>
         </p>
         <p style="margin-top:var(--space-6);">
           <strong>Point d'entrée opérationnel&nbsp;: Fabrice Liut</strong> — Fondateur de L'Alliance · Design Organisationnel · Lyon.<br/>
           +15 ans sur le terrain, +200 workshops facilités, de Saint-Gobain et Decathlon à la PMI mécanique du coin.
         </p>
         <p>
-          <a href="https://liut.me" class="btn-ghost" target="_blank" rel="noopener noreferrer" style="font-size:var(--text-sm);">liut.me →</a>
+          <a href="https://liut.me" class="btn-ghost btn-ghost--sm" target="_blank" rel="noopener noreferrer">liut.me →</a>
           &nbsp;·&nbsp;
-          <a href="https://www.linkedin.com/in/liut/" class="btn-ghost" target="_blank" rel="noopener noreferrer" style="font-size:var(--text-sm);">LinkedIn →</a>
+          <a href="https://www.linkedin.com/in/liut/" class="btn-ghost btn-ghost--sm" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
         </p>
       </div>
 
       <!-- Séparateur -->
-      <hr style="border:none;border-top:var(--border-hairline);margin-block:var(--space-16);" />
+      <hr class="divider" />
 
       <!-- Pourquoi A-Team -->
       <div class="reveal">
@@ -340,11 +340,11 @@
       </div>
 
       <!-- Séparateur -->
-      <hr style="border:none;border-top:var(--border-hairline);margin-block:var(--space-16);" />
+      <hr class="divider" />
 
       <!-- Rejoindre L'Alliance -->
       <div class="reveal">
-        <blockquote style="font-style:italic;font-size:var(--text-sm);">
+        <blockquote class="blockquote--sm">
           Vous êtes indépendant·e senior et vous voulez composer avec nous&nbsp;? Lisez ce qui suit.
         </blockquote>
         <h2>Rejoindre L'Alliance</h2>
@@ -362,7 +362,7 @@
         <p><strong>Ce qu'on cherche en ce moment.</strong> Facilitation industrielle (PMI, ESG, transmission), change management terrain, expertises sectorielles, sprint mastering confirmé.</p>
         <p>Écrivez-nous en 5 lignes&nbsp;: qui vous êtes, ce que vous faites de mieux, un workshop dont vous êtes fier·e, votre TJM cible.</p>
         <p>
-          <a href="./index.html#contact" class="btn-primary" style="display:inline-flex;">
+          <a href="./index.html#contact" class="btn-primary">
             Écrire à Fabrice
             <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
               <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
@@ -385,7 +385,7 @@
       <span class="footer__copy">
         © 2026 L'Alliance | Alliés Stratégiques
       </span>
-      <a href="./index.html" class="footer__nav-link" style="font-size:var(--text-xs);letter-spacing:0.15em;text-transform:uppercase;color:var(--color-text-faint);transition:color var(--dur-mid);">
+      <a href="./index.html" class="footer__nav-link">
         Accueil
       </a>
     </div>
