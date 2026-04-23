@@ -1707,6 +1707,22 @@ h1, h2, h3 {
 }
 .join-steps__list li strong { color: var(--color-text); font-weight: 600; }
 
+/* ── Quotes grid (2 colonnes desktop) ───────────────────────────────────── */
+.quotes-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-6);
+  margin-block: var(--space-4) var(--space-8);
+}
+@media (min-width: 640px) {
+  .quotes-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-8);
+    align-items: start;
+  }
+}
+.quotes-grid blockquote { margin: 0; }
+
 /* ── Offer: format cards ─────────────────────────────────────────────────── */
 .offer-formats {
   display: grid;
