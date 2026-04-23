@@ -6,8 +6,9 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main:      resolve(__dirname, 'index.html'),
-        manifesto: resolve(__dirname, 'manifesto.html'),
+        main:             resolve(__dirname, 'index.html'),
+        manifesto:        resolve(__dirname, 'manifesto.html'),
+        'a-team-workshops': resolve(__dirname, 'a-team-workshops.html'),
       },
     },
   },

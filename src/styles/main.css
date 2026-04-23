@@ -1685,6 +1685,81 @@ h1, h2, h3 {
 }
 .join-steps__list li strong { color: var(--color-text); font-weight: 600; }
 
+/* ── Offer: format cards ─────────────────────────────────────────────────── */
+.offer-formats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-4);
+  margin-block: var(--space-8);
+}
+@media (max-width: 640px) {
+  .offer-formats { grid-template-columns: 1fr; }
+}
+.offer-format-card {
+  padding: var(--space-6) var(--space-5);
+  border: var(--border-hairline);
+  background: oklch(12% 0.015 240 / 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  transition:
+    border-color var(--dur-mid) var(--ease-out),
+    background   var(--dur-mid) var(--ease-out);
+}
+.offer-format-card--featured {
+  border-color: oklch(55% 0.12 55 / 0.5);
+  background: oklch(14% 0.02 55 / 0.3);
+}
+.offer-format-card:hover {
+  border-color: oklch(55% 0.12 55 / 0.4);
+  background: oklch(15% 0.018 240 / 0.7);
+}
+.offer-format__duration {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-text);
+  margin: 0;
+}
+.offer-format__price {
+  font-size: var(--text-sm);
+  font-weight: 600;
+  color: var(--color-accent);
+  margin: 0;
+}
+.offer-format__desc {
+  font-size: var(--text-xs);
+  color: var(--color-text-faint);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Offer: étapes numérotées ────────────────────────────────────────────── */
+.offer-steps {
+  list-style: none;
+  padding: 0;
+  margin-block: var(--space-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-5);
+}
+.offer-steps li {
+  display: flex;
+  gap: var(--space-5);
+  align-items: flex-start;
+  padding: 0;
+}
+.offer-steps li::before { display: none; }
+.offer-steps__num {
+  flex-shrink: 0;
+  min-width: 6rem;
+  font-size: var(--text-xs);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-accent-dim);
+  padding-top: 3px;
+}
+
 /* ── Lisibilité : retours à la ligne propres ─────────────────────────────── */
 .hero__title,
 .heading-1, .heading-2, .heading-3,
