@@ -32,6 +32,7 @@
 
   /* --- RADII --- */
   --radius-card:       0px;   /* architectural: angles vifs */
+  --radius-sm:         4px;
   --radius-pill:       9999px;
   --radius-input:      2px;
   --radius-modal:      4px;
