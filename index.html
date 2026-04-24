@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>L'Alliance | Alliés Stratégiques</title>
+  <title>L'Alliance — Collectif de seniors · Facilitation stratégique · Lyon</title>
   <meta name="description" content="Le collectif de seniors libres pour les organisations complexes. A-Team Workshops, A-Team Open, facilitation stratégique — Business, Humain, Process, Marque." />
   <meta name="author" content="Fabrice Liut — L'Alliance" />
 
@@ -32,6 +32,29 @@
 
   <!-- Styles -->
   <link rel="stylesheet" href="/src/styles/main.css" />
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "L'Alliance — Alliés Stratégiques",
+    "url": "https://alliance.liut.me/",
+    "logo": "https://alliance.liut.me/assets/og/home.jpg",
+    "description": "Collectif de seniors indépendants pour les organisations complexes. Facilitation stratégique, A-Team Workshops, A-Team Open. Base Lyon, rayonnement national.",
+    "founder": {
+      "@type": "Person",
+      "name": "Fabrice Liut",
+      "url": "https://liut.me",
+      "sameAs": "https://www.linkedin.com/in/liut/"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lyon",
+      "addressCountry": "FR"
+    }
+  }
+  </script>
 </head>
 <body>
   <!-- SVG filter: duotone charte (ombre→marine, lumière→ambre) -->
@@ -180,7 +203,7 @@
     <!-- ============================================================
          PREUVE SOCIALE
          ============================================================ -->
-    <div class="proof-strip" aria-hidden="true">
+    <div class="proof-strip" aria-label="Chiffres clés de L'Alliance">
       <div class="container proof-strip__inner">
         <div class="proof-strip__item">
           <span class="proof-strip__number">15 ans</span>
@@ -624,33 +647,9 @@
               Entre membres, chacun reste libre de son propre fonctionnement.
             </p>
 
-            <div class="join-steps">
-              <p class="label-overline">Rejoindre l&rsquo;Alliance</p>
-              <ol class="join-steps__list">
-                <li>
-                  <span class="join-steps__num">01</span>
-                  <div><strong>Candidature</strong>&nbsp;&mdash; D&eacute;crivez votre parcours
-                  et ce qui vous am&egrave;ne ici via le formulaire.</div>
-                </li>
-                <li>
-                  <span class="join-steps__num">02</span>
-                  <div><strong>&Eacute;change</strong>&nbsp;&mdash; Une conversation honn&ecirc;te sur
-                  ce qu&rsquo;on construit, sans pitch ni s&eacute;lection froide.</div>
-                </li>
-                <li>
-                  <span class="join-steps__num">03</span>
-                  <div><strong>Premi&egrave;re mission</strong>&nbsp;&mdash; Vous intervenez
-                  aux c&ocirc;t&eacute;s du collectif. L&rsquo;Alliance g&egrave;re le client.</div>
-                </li>
-              </ol>
-            </div>
-
-            <button class="btn-ghost" id="cta-contact-partners" aria-label="Candidater pour rejoindre l'Alliance">
-              Rejoindre l'Alliance
-              <svg class="btn-arrow" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false">
-                <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
-              </svg>
-            </button>
+            <a href="./rejoindre.html" class="btn-ghost">
+              En savoir plus sur le collectif &rarr;
+            </a>
           </div>
 
           <!-- Grille membres -->
@@ -698,16 +697,6 @@
 
             <div class="membre-card">
               <div class="membre-card__photo">
-                <img src="/membres/emile-londero.jpg" alt="&Eacute;mile Londero" width="80" height="80" loading="lazy" />
-              </div>
-              <div class="membre-card__info">
-                <span class="membre-card__name">&Eacute;mile Londero</span>
-                <span class="membre-card__role">Marque &middot; Branding &middot; Strat&eacute;gie com</span>
-              </div>
-            </div>
-
-            <div class="membre-card">
-              <div class="membre-card__photo">
                 <img src="/membres/gregor-ozbolt.jpg" alt="Gregor Ozbolt" width="80" height="80" loading="lazy" />
               </div>
               <div class="membre-card__info">
@@ -716,45 +705,12 @@
               </div>
             </div>
 
-            <div class="membre-card">
-              <div class="membre-card__photo">
-                <img src="/membres/romain-vacher.jpg" alt="Romain Vacher" width="80" height="80" loading="lazy" />
-              </div>
+            <a href="./rejoindre.html" class="membre-card membre-card--more">
               <div class="membre-card__info">
-                <span class="membre-card__name">Romain Vacher</span>
-                <span class="membre-card__role">Entrepreneuriat &middot; Structuration &middot; Invest</span>
+                <span class="membre-card__name">+5 experts</span>
+                <span class="membre-card__role">Voir le collectif complet &rarr;</span>
               </div>
-            </div>
-
-            <div class="membre-card">
-              <div class="membre-card__photo">
-                <img src="/membres/thibault-jaillon.jpg" alt="Thibault Jaillon" width="80" height="80" loading="lazy" />
-              </div>
-              <div class="membre-card__info">
-                <span class="membre-card__name">Thibault Jaillon</span>
-                <span class="membre-card__role">Entrepreneuriat &middot; Structuration &middot; Invest</span>
-              </div>
-            </div>
-
-            <div class="membre-card">
-              <div class="membre-card__photo">
-                <img src="/membres/yanis-cherfaoui.jpg" alt="Yanis Cherfaoui" width="80" height="80" loading="lazy" />
-              </div>
-              <div class="membre-card__info">
-                <span class="membre-card__name">Yanis Cherfaoui</span>
-                <span class="membre-card__role">Innovation &middot; M&eacute;ta-design</span>
-              </div>
-            </div>
-
-            <div class="membre-card">
-              <div class="membre-card__photo">
-                <img src="/membres/steph-cruchon.jpg" alt="Steph Cruchon" width="80" height="80" loading="lazy" />
-              </div>
-              <div class="membre-card__info">
-                <span class="membre-card__name">Steph Cruchon</span>
-                <span class="membre-card__role">Facilitation &middot; Workshop &middot; Design Sprint</span>
-              </div>
-            </div>
+            </a>
 
           </div>
 
@@ -788,6 +744,7 @@
         <div class="contact-form-section reveal">
           <form
             id="contact-form"
+            action="https://formsubmit.co/liut.fabrice@gmail.com"
             novalidate
             aria-label="Formulaire de contact"
           >
@@ -889,6 +846,7 @@
             <a href="a-team-workshops.html">Workshops</a>
             <a href="a-team-open.html">A-Team Open</a>
             <a href="rejoindre.html">Rejoindre</a>
+            <span aria-hidden="true" style="opacity:.3">·</span>
             <a href="mentions-legales.html">Mentions légales</a>
             <a href="politique-confidentialite.html">Confidentialité</a>
           </nav>

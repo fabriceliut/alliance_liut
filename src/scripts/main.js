@@ -98,7 +98,6 @@ const contactIds = [
   'cta-contact-mobile',
   'cta-contact-hero',
   'cta-contact-expertise',
-  'cta-contact-partners',
   'cta-contact-manifesto',
 ];
 

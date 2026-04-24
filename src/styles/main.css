@@ -979,6 +979,13 @@ h1, h2, h3 {
   transition: color var(--dur-mid);
 }
 .footer__nav-link:hover { color: var(--color-text-muted); }
+.footer__legal-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-3) var(--space-6);
+  align-items: center;
+  justify-content: flex-end;
+}
 
 /* ============================================================
    SECTION HEADER (overline + title + sub)
@@ -1660,6 +1667,18 @@ h1, h2, h3 {
   background: oklch(16% 0.018 240 / 0.7);
   transform: translateY(-3px);
   box-shadow: 0 8px 24px oklch(0% 0 0 / 0.3);
+}
+.membre-card--more {
+  cursor: pointer;
+  justify-content: center;
+  border-style: dashed;
+  border-color: oklch(55% 0.12 55 / 0.18);
+  text-decoration: none;
+  min-height: 120px;
+}
+.membre-card--more:hover {
+  border-color: oklch(55% 0.12 55 / 0.45);
+  transform: translateY(-3px);
 }
 .membre-card__photo {
   width: 96px;
