@@ -1537,7 +1537,7 @@ h1, h2, h3 {
   border-color: var(--color-accent);
 }
 
-/* ── Teasers grid (manifeste + offre) ────────────────────────── */
+/* ── Teasers grid (manifeste + offres) ───────────────────────── */
 .teasers-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -1545,7 +1545,7 @@ h1, h2, h3 {
 }
 @media (min-width: 640px) {
   .teasers-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
   }
   .teasers-grid .reveal { height: 100%; }
 }
