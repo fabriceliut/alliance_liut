@@ -411,9 +411,8 @@ h1, h2, h3 {
 /* Blobs — radial-gradient (pas de filter:blur = pas de layer de composition) */
 .hero__blob {
   position: absolute;
-  border-radius: var(--radius-pill);
-  pointer-events: none;
   border-radius: 50%;
+  pointer-events: none;
 }
 .hero__blob--top  { top: 8%;  right: 8%;  width: 500px; height: 500px; background: radial-gradient(circle, oklch(25% 0.04 55 / 0.10) 0%, transparent 70%); }
 .hero__blob--bot  { bottom: 8%; left: 8%; width: 600px; height: 600px; background: radial-gradient(circle, oklch(20% 0.015 240 / 0.20) 0%, transparent 70%); }
@@ -857,31 +856,6 @@ h1, h2, h3 {
   font-weight: 300;
   color: var(--color-text-muted);
   line-height: 1.75;
-}
-
-.partners-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: var(--space-4);
-  opacity: 0.8;
-}
-.partners-grid__item {
-  aspect-ratio: 1;
-  border: var(--border-hairline);
-  background: oklch(14% 0.015 240 / 0.3);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-text-faint);
-  transition:
-    background    var(--dur-slow),
-    border-color  var(--dur-slow),
-    color         var(--dur-mid);
-}
-.partners-grid__item:hover {
-  background: var(--color-surface-3);
-  border-color: oklch(55% 0.12 55 / 0.3);
-  color: var(--color-accent);
 }
 
 /* ============================================================
@@ -1557,50 +1531,6 @@ h1, h2, h3 {
   .teasers-grid .reveal { height: 100%; }
 }
 
-/* ── Partner cards ───────────────────────────────────────────── */
-.partners-profiles {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-}
-.partner-card {
-  display: flex;
-  align-items: center;
-  gap: var(--space-4);
-  padding: var(--space-6);
-  border: var(--border-hairline);
-  border-radius: var(--radius-sm);
-  background: oklch(14% 0.015 240 / 0.4);
-  transition: border-color var(--dur-mid);
-}
-.partner-card:hover { border-color: oklch(55% 0.12 55 / 0.3); }
-.partner-card__avatar {
-  width: 3rem; height: 3rem;
-  border-radius: var(--radius-pill);
-  background: var(--color-surface-3);
-  border: var(--border-hairline);
-  display: flex; align-items: center; justify-content: center;
-  font-family: var(--font-serif); font-size: var(--text-xl);
-  color: var(--color-accent); font-weight: 700; flex-shrink: 0;
-}
-.partner-card__info { display: flex; flex-direction: column; gap: 2px; }
-.partner-card__name {
-  font-family: var(--font-serif);
-  font-size: var(--text-lg);
-  color: var(--color-text);
-}
-.partner-card__role {
-  font-size: var(--text-xs);
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: var(--color-accent-dim);
-}
-.partner-card__line {
-  font-size: var(--text-sm);
-  font-weight: 300;
-  color: var(--color-text-faint);
-}
-
 /* ── Vision case snippet ───────────────────────────────────────────────── */
 .vision-case {
   padding: var(--space-8) var(--space-6);
@@ -1615,26 +1545,6 @@ h1, h2, h3 {
   margin-top: var(--space-2);
 }
 .vision-case__text strong { color: var(--color-text); }
-
-/* ── Vision origin block ───────────────────────────────────────── */
-.vision-origin {
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-2);
-}
-.vision-origin__label {
-  margin: 0;
-  color: var(--color-accent-dim);
-}
-.vision-origin__text {
-  font-size: var(--text-sm);
-  color: var(--color-text-faint);
-  line-height: 1.75;
-  font-style: italic;
-  border-left: 1px solid oklch(35% 0.025 240 / 0.4);
-  padding-left: var(--space-4);
-  margin: 0;
-}
 
 /* ── Membres grid ─────────────────────────────────────────────── */
 .membres-grid {
@@ -1765,41 +1675,6 @@ h1, h2, h3 {
   text-transform: uppercase;
   color: var(--color-text-faint);
 }
-
-/* ── Join steps ─────────────────────────────────────────────────────── */
-.join-steps {
-  margin-top: var(--space-8);
-  margin-bottom: var(--space-6);
-  padding: var(--space-6);
-  border: var(--border-hairline);
-  background: oklch(12% 0.015 240 / 0.3);
-}
-.join-steps__list {
-  list-style: none;
-  display: flex;
-  flex-direction: column;
-  gap: var(--space-4);
-  margin-top: var(--space-3);
-}
-.join-steps__list li {
-  display: flex;
-  align-items: flex-start;
-  gap: var(--space-4);
-  font-size: var(--text-sm);
-  color: var(--color-text-muted);
-  line-height: 1.65;
-}
-.join-steps__num {
-  font-family: var(--font-serif);
-  font-size: var(--text-xs);
-  font-weight: 700;
-  color: var(--color-accent);
-  letter-spacing: 0.1em;
-  min-width: 1.5rem;
-  flex-shrink: 0;
-  padding-top: 2px;
-}
-.join-steps__list li strong { color: var(--color-text); font-weight: 600; }
 
 /* ── Quotes grid (2 colonnes desktop) ───────────────────────────────────── */
 .quotes-grid {
@@ -2131,9 +2006,6 @@ p { overflow-wrap: break-word; }
 
 /* ── btn-ghost small modifier ───────────────────────────────────── */
 .btn-ghost--sm { font-size: var(--text-sm); }
-
-/* ── Join steps overline label ──────────────────────────────────── */
-.join-steps .label-overline { margin-bottom: var(--space-5); }
 
 /* ── Testimonial CTA wrap btn-ghost size ────────────────────────── */
 .testimonial__cta-wrap .btn-ghost { font-size: var(--text-xs); }
