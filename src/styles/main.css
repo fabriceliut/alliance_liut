@@ -1980,6 +1980,7 @@ p { overflow-wrap: break-word; }
   line-height: 1.6;
   max-width: 580px;
   margin-inline: auto;
+  margin-bottom: var(--space-12);
 }
 
 /* ── Hero CTA group ───────────────────────────────────────────────────────── */
