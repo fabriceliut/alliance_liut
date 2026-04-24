@@ -11,6 +11,8 @@ export default defineConfig({
         'a-team-workshops': resolve(__dirname, 'a-team-workshops.html'),
         'a-team-open':    resolve(__dirname, 'a-team-open.html'),
         'rejoindre':      resolve(__dirname, 'rejoindre.html'),
+        'mentions-legales': resolve(__dirname, 'mentions-legales.html'),
+        'politique-confidentialite': resolve(__dirname, 'politique-confidentialite.html'),
       },
     },
   },
