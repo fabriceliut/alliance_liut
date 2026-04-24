@@ -2084,6 +2084,17 @@ p { overflow-wrap: break-word; }
 .article-content--mid  { max-width: 780px; }
 .article-content--wide { max-width: 860px; }
 
+/* Grille membres pleine largeur (page rejoindre) */
+.membres-grid--full {
+  grid-template-columns: repeat(2, 1fr);
+}
+@media (min-width: 600px) {
+  .membres-grid--full { grid-template-columns: repeat(3, 1fr); }
+}
+@media (min-width: 900px) {
+  .membres-grid--full { grid-template-columns: repeat(5, 1fr); }
+}
+
 /* ── KPI numbers (testimonials + workshops) ────────────────────── */
 .kpi__number {
   display: block;

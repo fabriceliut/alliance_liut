@@ -33,6 +33,20 @@
   <!-- Reading progress bar -->
   <div class="reading-progress" id="reading-progress" aria-hidden="true"></div>
 
+  <!-- SVG filter : duotone charte (ombre→marine, lumière→ambre) -->
+  <svg style="position:absolute;width:0;height:0;overflow:hidden" aria-hidden="true">
+    <defs>
+      <filter id="duotone-alliance" color-interpolation-filters="sRGB">
+        <feColorMatrix type="saturate" values="0" result="gray"/>
+        <feComponentTransfer in="gray">
+          <feFuncR type="table" tableValues="0.047 0.902"/>
+          <feFuncG type="table" tableValues="0.063 0.671"/>
+          <feFuncB type="table" tableValues="0.098 0.200"/>
+        </feComponentTransfer>
+      </filter>
+    </defs>
+  </svg>
+
   <div class="grain-bg" aria-hidden="true"></div>
   <a class="skip-link" href="#main-content">Aller au contenu principal</a>
 
@@ -95,7 +109,7 @@
     <!-- ============================================================
          CONTENU
          ============================================================ -->
-    <article class="container article-content article-content--wide" aria-label="Rejoindre L'Alliance — recrutement">
+    <article class="container article-content" aria-label="Rejoindre L'Alliance — recrutement">
 
       <!-- 01 Ce qu'est L'Alliance -->
       <div class="reveal">
@@ -214,10 +228,10 @@
       <!-- 06 Le collectif -->
       <div class="reveal">
         <h2>06 — Voici qui compose le collectif</h2>
-        <p>10 membres à ce jour. Trois critères pour en faire partie&nbsp;: l&rsquo;excellence dans son domaine, la capacité à bosser en squad, et l&rsquo;envie de construire quelque chose de durable ensemble.</p>
+        <p>Trois critères pour en faire partie&nbsp;: l&rsquo;excellence dans son domaine, la capacité à bosser en squad, et l&rsquo;envie de construire quelque chose de durable ensemble.</p>
       </div>
 
-      <div class="membres-grid reveal" style="transition-delay: 0.1s">
+      <div class="membres-grid membres-grid--full reveal" style="transition-delay: 0.1s">
 
         <div class="membre-card">
           <div class="membre-card__photo">
@@ -339,7 +353,7 @@
               <path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>
             </svg>
           </a>
-          <a href="./manifeste.html" class="btn-ghost">La Grande Bifurcation →</a>
+          <a href="./manifeste.html" class="btn-ghost">Lire le manifeste &rarr;</a>
         </div>
       </div>
 
