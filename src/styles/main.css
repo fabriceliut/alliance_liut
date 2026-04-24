@@ -186,14 +186,13 @@ h1, h2, h3 {
 }
 .navbar__logo:hover .navbar__logo-sub { color: var(--color-accent); }
 
-/* Nav links */
+/* Nav links — masqué sur toutes les tailles (hamburger universel) */
 .navbar__links {
   display: none;
   align-items: center;
   gap: var(--space-10);
   list-style: none;
 }
-@media (min-width: 768px) { .navbar__links { display: flex; } }
 
 /* Secondary page back-link wrapper */
 .navbar__back {
@@ -244,7 +243,7 @@ h1, h2, h3 {
   transition: color var(--dur-mid);
 }
 .navbar__burger:hover { color: var(--color-accent); }
-@media (min-width: 768px) { .navbar__burger { display: none; } }
+/* burger visible sur toutes les tailles */
 
 /* Mobile menu overlay */
 .mobile-menu {
@@ -264,7 +263,7 @@ h1, h2, h3 {
   transition: opacity var(--dur-slow) var(--ease-out);
 }
 .mobile-menu.open { opacity: 1; pointer-events: auto; }
-@media (min-width: 768px) { .mobile-menu { display: none; } }
+/* overlay actif sur toutes les tailles */
 
 .mobile-menu__link {
   font-family: var(--font-serif);
@@ -422,7 +421,7 @@ h1, h2, h3 {
 .hero__inner {
   position: relative;
   z-index: 1;
-  max-width: 900px;
+  max-width: 1200px;
   margin-inline: auto;
   padding-inline: var(--content-px);
   text-align: center;
@@ -456,6 +455,9 @@ h1, h2, h3 {
   line-height: 1.05;
   color: var(--color-text);
   margin-bottom: var(--space-10);
+  text-align: left;
+  width: fit-content;
+  margin-inline: auto;
 }
 .hero__title em { color: var(--color-text-faint); font-style: italic; }
 
