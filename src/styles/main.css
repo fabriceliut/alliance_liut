@@ -186,16 +186,12 @@ h1, h2, h3 {
 }
 .navbar__logo:hover .navbar__logo-sub { color: var(--color-accent); }
 
-/* Nav links — masqué sur mobile, visible à partir de 1024px */
+/* Nav links — masqué (menu hamburger uniquement) */
 .navbar__links {
   display: none;
   align-items: center;
   gap: var(--space-6);
   list-style: none;
-}
-@media (min-width: 1024px) {
-  .navbar__links { display: flex; }
-  .navbar__burger { display: none; }
 }
 
 /* Secondary page back-link wrapper */
@@ -968,7 +964,45 @@ h1, h2, h3 {
   flex-wrap: wrap;
   gap: var(--space-3) var(--space-6);
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
+}
+@media (min-width: 640px) {
+  .footer__legal-nav { justify-content: flex-end; }
+}
+
+/* Footer bottom nav — index.html */
+.footer__bottom nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-5);
+  align-items: center;
+  justify-content: center;
+}
+
+/* Footer minimal — pages secondaires */
+.footer--minimal {
+  padding-block: var(--space-8);
+}
+.footer__bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-4);
+  text-align: center;
+}
+@media (min-width: 640px) {
+  .footer__bar {
+    flex-direction: row;
+    justify-content: space-between;
+    text-align: left;
+  }
+}
+.footer__copy {
+  font-size: var(--text-xs);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  white-space: nowrap;
 }
 
 /* ============================================================
