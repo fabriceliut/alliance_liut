@@ -996,7 +996,7 @@ h1, h2, h3 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: var(--space-1);
+  gap: var(--space-3);
 }
 @media (min-width: 768px) {
   .footer__bottom nav { align-items: flex-end; }
@@ -1004,7 +1004,7 @@ h1, h2, h3 {
 .footer__nav-main {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-2) var(--space-5);
+  gap: var(--space-2) var(--space-6);
   align-items: center;
   justify-content: center;
 }
