@@ -969,6 +969,27 @@ h1, h2, h3 {
 @media (min-width: 640px) {
   .footer__legal-nav { justify-content: flex-end; }
 }
+/* Sous-groupe liens légaux (mentions + confidentialité) */
+.footer__nav-sub {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2) var(--space-4);
+  justify-content: center;
+  margin-top: var(--space-1);
+}
+@media (min-width: 640px) {
+  .footer__nav-sub { justify-content: flex-end; }
+}
+.footer__nav-link--sub {
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--color-text-faint);
+  opacity: 0.55;
+  transition: opacity var(--dur-mid), color var(--dur-mid);
+}
+.footer__nav-link--sub:hover { opacity: 1; color: var(--color-text-muted); }
 
 /* Footer bottom nav — index.html */
 .footer__bottom nav {
