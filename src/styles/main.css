@@ -994,10 +994,22 @@ h1, h2, h3 {
 /* Footer bottom nav — index.html */
 .footer__bottom nav {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--space-1);
+}
+@media (min-width: 768px) {
+  .footer__bottom nav { align-items: flex-end; }
+}
+.footer__nav-main {
+  display: flex;
   flex-wrap: wrap;
   gap: var(--space-2) var(--space-5);
   align-items: center;
   justify-content: center;
+}
+@media (min-width: 768px) {
+  .footer__nav-main { justify-content: flex-end; }
 }
 
 /* Footer minimal — pages secondaires */
