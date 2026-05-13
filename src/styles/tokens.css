@@ -12,9 +12,9 @@
   --color-surface-3:   oklch(18% 0.018 240);   /* slate-800-ish */
 
   /* Text */
-  --color-text:        oklch(85% 0.010 220);   /* slate-200 */
-  --color-text-muted:  oklch(62% 0.012 220);   /* slate-400 */
-  --color-text-faint:  oklch(40% 0.010 220);   /* slate-600 */
+  --color-text:        oklch(93% 0.008 220);   /* near-white — meilleur contraste */
+  --color-text-muted:  oklch(70% 0.012 220);   /* slate-300 — lisible en corps de texte */
+  --color-text-faint:  oklch(46% 0.010 220);   /* slate-500 */
 
   /* Accent ambre — jamais utilisé comme fond large */
   --color-accent:      oklch(72% 0.14  60);    /* amber-500-ish */
@@ -26,9 +26,9 @@
   --color-disabled:    oklch(35% 0.008 220);
 
   /* --- BORDERS --- */
-  --border-hairline:   1px solid oklch(25% 0.02 240 / 0.6);
-  --border-accent:     1px solid oklch(55% 0.12 55 / 0.4);
-  --border-dashed:     1px dashed oklch(30% 0.015 240 / 0.7);
+  --border-hairline:   1px solid oklch(30% 0.02 240 / 0.7);
+  --border-accent:     1px solid oklch(55% 0.12 55 / 0.5);
+  --border-dashed:     1px dashed oklch(35% 0.015 240 / 0.7);
 
   /* --- RADII --- */
   --radius-card:       0px;   /* architectural: angles vifs */
@@ -81,7 +81,7 @@
   --space-16: 4rem;
   --space-20: 5rem;
   --space-24: 6rem;
-  --section-gap: clamp(80px, 10vw, 140px);
+  --section-gap: clamp(100px, 12vw, 160px);
 
   /* --- LAYOUT --- */
   --max-width:     1280px;
